@@ -28,7 +28,6 @@ public class BulletGenerator : MonoBehaviour {
     private void OnEnable()
     {
         flickGesture.Flicked += OnFlicked;
-        //GetComponent<FlickGesture>().StateChanged += HandleFlick;
     }
 
     private void OnDisable()
@@ -38,16 +37,18 @@ public class BulletGenerator : MonoBehaviour {
 
     private void OnFlicked(object sender, EventArgs e)
     {
-        Debug.Log("フリックされた: " + flickGesture.ScreenFlickVector);
         var instance = Instantiate(bulletPrefab);
 
         // 場所
         instance.gameObject.transform.position = player.gameObject.transform.position;
 
         // 速度
-        float speedX = flickGesture.ScreenFlickVector.x / 10.0f;
-        float speedY = flickGesture.ScreenFlickVector.y / 10.0f;
+        float angle = Mathf.Atan2(flickGesture.ScreenFlickVector.y, flickGesture.ScreenFlickVector.x);
+        float speedX = Mathf.Cos(angle);
+        float speedY = Mathf.Sin(angle);
+
+        //float speedX = flickGesture.ScreenFlickVector.x / 10.0f;
+        //float speedY = flickGesture.ScreenFlickVector.y / 10.0f;
         instance.GetComponent<Bullet>().Velocity = new Vector2(speedX * speed.x, speedY * speed.y);
-        Debug.Log(new Vector2(speedX * speed.x, speedY * speed.y));
     }
 }
