@@ -12,6 +12,16 @@ public class Bullet : BeseObject {
 	void Update () {
     }
 
+    void OnTriggerEnter2D(Collider2D collide)
+    {
+        switch (collide.gameObject.tag)
+        {
+            case "Enemy":
+                Destroy(this.gameObject);
+                break;
+        }
+    }
+
     void OnBecameInvisible()
     {
         Destroy(this.gameObject);

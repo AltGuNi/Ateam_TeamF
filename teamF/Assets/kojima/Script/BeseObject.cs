@@ -13,6 +13,8 @@ public class BeseObject : MonoBehaviour {
     [SerializeField]
     AttributeData attribute;
     [SerializeField]
+    float HP = 0.0f;
+    [SerializeField]
     float attack = 0.0f;
     [SerializeField]
     float defence = 0.0f;
