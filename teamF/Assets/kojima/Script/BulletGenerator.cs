@@ -38,7 +38,6 @@ public class BulletGenerator : MonoBehaviour {
 
     private void OnFlicked(object sender, EventArgs e)
     {
-        Debug.Log("フリックされた: " + flickGesture.ScreenFlickVector);
         var instance = Instantiate(bulletPrefab);
 
         // 場所
@@ -48,6 +47,5 @@ public class BulletGenerator : MonoBehaviour {
         float speedX = flickGesture.ScreenFlickVector.x / 10.0f;
         float speedY = flickGesture.ScreenFlickVector.y / 10.0f;
         instance.GetComponent<Bullet>().Velocity = new Vector2(speedX * speed.x, speedY * speed.y);
-        Debug.Log(new Vector2(speedX * speed.x, speedY * speed.y));
     }
 }
