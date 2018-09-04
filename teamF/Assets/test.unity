@@ -140,11 +140,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498d3624553823d43ba8638ecef3839b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1669536792492860, guid: ef2d4782276d3b649b47e014e102e4fb,
+  nomalbulletPrefab: {fileID: 1443853487764648, guid: d8d16fee28589c84c866717753d914d6,
+    type: 2}
+  firebulletPrefab: {fileID: 1060925188640666, guid: 8c3a15f4ac91b4e4a85f485b2a9e7174,
+    type: 2}
+  waterbulletPrefab: {fileID: 1144223717700342, guid: 6d2e480fed9441045bc67bdd8c78dfa9,
     type: 2}
   player: {fileID: 1349462102}
   flickGesture: {fileID: 1349462106}
-  speed: {x: 3, y: 3}
+  speed: {x: 1, y: 3}
 --- !u!4 &462759056
 Transform:
   m_ObjectHideFlags: 0
@@ -416,6 +420,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab379f5fad108764c94d9d9ec64a008c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attribute: 1
+  attack: 0
+  defence: 0
 --- !u!114 &1349462106
 MonoBehaviour:
   m_ObjectHideFlags: 0

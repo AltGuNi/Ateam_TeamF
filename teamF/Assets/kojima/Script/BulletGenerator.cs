@@ -7,8 +7,14 @@ using TouchScript.Gestures;
 public class BulletGenerator : MonoBehaviour {
 
     [SerializeField]
-    GameObject bulletPrefab;
+    GameObject nomalbulletPrefab;
     [SerializeField]
+    GameObject firebulletPrefab;
+    [SerializeField]
+    GameObject waterbulletPrefab;
+
+
+    [SerializeField, Space(10)]
     GameObject player;
     [SerializeField]
     FlickGesture flickGesture;
@@ -37,7 +43,24 @@ public class BulletGenerator : MonoBehaviour {
 
     private void OnFlicked(object sender, EventArgs e)
     {
-        var instance = Instantiate(bulletPrefab);
+        GameObject instance;
+
+        switch (player.GetComponent<Player>().Attribute)
+        {
+            case BeseObject.AttributeData.Nomal:
+                instance = Instantiate(nomalbulletPrefab);
+                break;
+            case BeseObject.AttributeData.Fire:
+                instance = Instantiate(firebulletPrefab);
+                break;
+            case BeseObject.AttributeData.Water:
+                instance = Instantiate(waterbulletPrefab);
+                break;
+
+            default:
+                return;
+                break;
+        }
 
         // 場所
         instance.gameObject.transform.position = player.gameObject.transform.position;

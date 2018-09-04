@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using TouchScript.Gestures;
 
-public class Player : MonoBehaviour {
+public class Player : BeseObject {
 
     // Use this for initialization
     void Start () {
