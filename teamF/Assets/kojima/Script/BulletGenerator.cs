@@ -41,11 +41,11 @@ public class BulletGenerator : MonoBehaviour {
         flickGesture.Flicked -= OnFlicked;
     }
 
-    private void OnFlicked(object sender, EventArgs e)
+    public void Instance(BeseObject obj, Vector2 dir)
     {
         GameObject instance;
 
-        switch (player.GetComponent<Player>().Attribute)
+        switch (obj.Attribute)
         {
             case BeseObject.AttributeData.Nomal:
                 instance = Instantiate(nomalbulletPrefab);
@@ -63,15 +63,19 @@ public class BulletGenerator : MonoBehaviour {
         }
 
         // 場所
-        instance.gameObject.transform.position = player.gameObject.transform.position;
+        instance.gameObject.transform.position = obj.gameObject.transform.position;
 
         // 速度
-        float angle = Mathf.Atan2(flickGesture.ScreenFlickVector.y, flickGesture.ScreenFlickVector.x);
-        float speedX = Mathf.Cos(angle);
-        float speedY = Mathf.Sin(angle);
+        instance.GetComponent<Bullet>().Velocity = new Vector2(dir.x * speed.x, dir.y * speed.y);
+    }
 
-        //float speedX = flickGesture.ScreenFlickVector.x / 10.0f;
-        //float speedY = flickGesture.ScreenFlickVector.y / 10.0f;
-        instance.GetComponent<Bullet>().Velocity = new Vector2(speedX * speed.x, speedY * speed.y);
+    private void OnFlicked(object sender, EventArgs e)
+    {
+        // 方向
+        float angle = Mathf.Atan2(flickGesture.ScreenFlickVector.y, flickGesture.ScreenFlickVector.x);
+        float dirX = Mathf.Cos(angle);
+        float dirY = Mathf.Sin(angle);
+
+        Instance(player.GetComponent<Player>(), new Vector2(dirX, dirY));
     }
 }
