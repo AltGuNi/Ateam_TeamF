@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 492}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1280
     height: 677
-  m_MinSize: {x: 950, y: 492}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 100
+  controlID: 77
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 81
+  controlID: 27
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -348,7 +348,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 96fbffff00000000
+    m_ExpandedIDs: 9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -443,8 +443,7 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 0
-    m_Folders:
-    - Assets/kojima/Prefab
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -455,7 +454,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e6280000
     m_LastClickedID: 10470
-    m_ExpandedIDs: 00000000e42800002c290000dc2900004c2a0000722a00003c2b00004c2b0000662b0000822b0000
+    m_ExpandedIDs: 00000000d42800001c29000046290000ce290000422a0000682a0000322b0000422b00005c2b0000782b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -483,18 +482,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e42800002c29000054290000dc2900004c2a0000722a00003c2b00004c2b0000662b0000822b0000
+    m_ExpandedIDs: 00000000d42800001c29000046290000ce290000422a0000682a0000ca2a0000322b0000422b00005c2b0000782b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: BackGround
-      m_OriginalName: BackGround
+      m_Name: AtributeBackGround
+      m_OriginalName: AtributeBackGround
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 11622
+      m_UserData: 11656
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -643,14 +642,14 @@ MonoBehaviour:
     height: 302
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 64822.204653082306
+  lastFramingTime: 1479.2044227578672
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.57252127, y: -0.62447226, z: 1.4375}
+    m_Target: {x: -14.762156, y: 45.91496, z: 0.390625}
     speed: 2
-    m_Value: {x: -0.57252127, y: -0.62447226, z: 1.4375}
+    m_Value: {x: -14.762156, y: 45.91496, z: 0.390625}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -678,9 +677,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 12.429686
+    m_Target: 112.11444
     speed: 2
-    m_Value: 12.429686
+    m_Value: 112.11444
   m_Ortho:
     m_Target: 1
     speed: 2

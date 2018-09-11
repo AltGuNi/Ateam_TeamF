@@ -16,6 +16,7 @@ public class BeseObject : MonoBehaviour {
         Nomal,
         Fire,
         Water,
+        Wood,
 
         AttributeMax
     };
@@ -49,5 +50,6 @@ public class BeseObject : MonoBehaviour {
     public AttributeData Attribute
     {
         get { return attribute; }
+        set { attribute = value; }
     }
 }

@@ -12,6 +12,8 @@ public class BulletGenerator : MonoBehaviour {
     GameObject firebulletPrefab;
     [SerializeField]
     GameObject waterbulletPrefab;
+    [SerializeField]
+    GameObject woodbulletPrefab;
 
     [SerializeField, Space(10)]
     Vector2 speed = new Vector2(1.0f, 1.0f);
@@ -40,6 +42,9 @@ public class BulletGenerator : MonoBehaviour {
                 break;
             case BeseObject.AttributeData.Water:
                 instance = Instantiate(waterbulletPrefab);
+                break;
+            case BeseObject.AttributeData.Wood:
+                instance = Instantiate(woodbulletPrefab);
                 break;
 
             default:
