@@ -10,6 +10,7 @@ public class CharacterSelect : MonoBehaviour {
     GameObject character;
 
     Vector2 PlayerPos = new Vector2(0.0f, -2.7f);
+    GameObject currentPlayer;
 
 	// Use this for initialization
 	void Start () {
@@ -32,9 +33,12 @@ public class CharacterSelect : MonoBehaviour {
 
     private void OnPressed(object sender, EventArgs e)
     {
-        Destroy(GameObject.Find("Player"));
-        GameObject obj = Instantiate(character);
-        obj.transform.position = PlayerPos;
-        obj.name = "Player";
+        if (!currentPlayer)
+        {
+            Destroy(GameObject.Find("Player"));
+            currentPlayer = Instantiate(character);
+            currentPlayer.transform.position = PlayerPos;
+            currentPlayer.name = "Player";
+        }
     }
 }
