@@ -91,7 +91,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 116
+  controlID: 100
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 27
+  controlID: 81
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,8 +230,8 @@ MonoBehaviour:
     y: 0
     width: 313
     height: 323
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -256,8 +256,8 @@ MonoBehaviour:
     y: 323
     width: 313
     height: 304
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -348,7 +348,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 9efbffff00000000
+    m_ExpandedIDs: 96fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -443,7 +443,8 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 0
-    m_Folders: []
+    m_Folders:
+    - Assets/kojima/Prefab
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -454,7 +455,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e6280000
     m_LastClickedID: 10470
-    m_ExpandedIDs: 00000000d22800001a290000ca2900003a2a0000602a00002a2b00003a2b0000542b0000702b0000
+    m_ExpandedIDs: 00000000e42800002c290000dc2900004c2a0000722a00003c2b00004c2b0000662b0000822b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -482,21 +483,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d22800001a290000ca2900003a2a0000602a00002a2b00003a2b0000542b0000702b0000
+    m_ExpandedIDs: 00000000e42800002c29000054290000dc2900004c2a0000722a00003c2b00004c2b0000662b0000822b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: BackGround
+      m_OriginalName: BackGround
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 11622
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -647,9 +648,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.46393672, y: -0.15935433, z: 0.015225377}
+    m_Target: {x: -0.57252127, y: -0.62447226, z: 1.4375}
     speed: 2
-    m_Value: {x: -0.46393672, y: -0.15935433, z: 0.015225377}
+    m_Value: {x: -0.57252127, y: -0.62447226, z: 1.4375}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -677,9 +678,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.489441
+    m_Target: 12.429686
     speed: 2
-    m_Value: 8.489441
+    m_Value: 12.429686
   m_Ortho:
     m_Target: 1
     speed: 2
