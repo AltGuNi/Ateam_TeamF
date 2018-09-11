@@ -3,15 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BeseObject : MonoBehaviour {
+    public enum TypeData
+    {
+        None,
+        Player,
+        Enemy,
+
+        TypeMax
+    };
     public enum AttributeData
     {
         Nomal,
         Fire,
-        Water
+        Water,
+
+        AttributeMax
     };
 
     [SerializeField]
-    AttributeData attribute;
+    TypeData type = TypeData.None;
+    [SerializeField]
+    AttributeData attribute = AttributeData.Nomal;
     [SerializeField]
     float HP = 0.0f;
     [SerializeField]
@@ -29,6 +41,11 @@ public class BeseObject : MonoBehaviour {
 		
 	}
 
+    public TypeData Type
+    {
+        get { return type; }
+        set { type = value; }
+    }
     public AttributeData Attribute
     {
         get { return attribute; }

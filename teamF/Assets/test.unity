@@ -167,10 +167,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f02df8b1e14743b3a31c56be21613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 2
   attribute: 0
   HP: 0
   attack: 0
   defence: 0
+  shotInterval: 1
 --- !u!212 &419396611
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -261,8 +263,6 @@ MonoBehaviour:
     type: 2}
   waterbulletPrefab: {fileID: 1144223717700342, guid: 6d2e480fed9441045bc67bdd8c78dfa9,
     type: 2}
-  player: {fileID: 1349462102}
-  flickGesture: {fileID: 1349462106}
   speed: {x: 3, y: 3}
 --- !u!4 &462759056
 Transform:
@@ -535,7 +535,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab379f5fad108764c94d9d9ec64a008c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attribute: 0
+  type: 1
+  attribute: 1
   HP: 0
   attack: 0
   defence: 0

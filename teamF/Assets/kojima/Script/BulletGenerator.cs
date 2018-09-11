@@ -13,12 +13,7 @@ public class BulletGenerator : MonoBehaviour {
     [SerializeField]
     GameObject waterbulletPrefab;
 
-
     [SerializeField, Space(10)]
-    GameObject player;
-    [SerializeField]
-    FlickGesture flickGesture;
-    [SerializeField]
     Vector2 speed = new Vector2(1.0f, 1.0f);
 
     // Use this for initialization
@@ -30,17 +25,7 @@ public class BulletGenerator : MonoBehaviour {
 	void Update () {
 		
 	}
-
-    private void OnEnable()
-    {
-        flickGesture.Flicked += OnFlicked;
-    }
-
-    private void OnDisable()
-    {
-        flickGesture.Flicked -= OnFlicked;
-    }
-
+    
     public void Instance(BeseObject obj, Vector2 dir)
     {
         GameObject instance;
@@ -67,15 +52,8 @@ public class BulletGenerator : MonoBehaviour {
 
         // 速度
         instance.GetComponent<Bullet>().Velocity = new Vector2(dir.x * speed.x, dir.y * speed.y);
-    }
 
-    private void OnFlicked(object sender, EventArgs e)
-    {
-        // 方向
-        float angle = Mathf.Atan2(flickGesture.ScreenFlickVector.y, flickGesture.ScreenFlickVector.x);
-        float dirX = Mathf.Cos(angle);
-        float dirY = Mathf.Sin(angle);
-
-        Instance(player.GetComponent<Player>(), new Vector2(dirX, dirY));
+        // タイプを設定する
+        instance.GetComponent<Bullet>().Type = obj.Type;
     }
 }
