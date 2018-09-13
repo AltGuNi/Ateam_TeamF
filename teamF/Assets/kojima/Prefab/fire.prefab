@@ -114,11 +114,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a8dfefdf3508a049bdd6d91f45aa8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  attribute: 1
-  HP: 0
-  attack: 0
-  defence: 0
+  status:
+    type: 0
+    attribute: 1
+    HP: 0
+    attack: 0
+    defence: 0
 --- !u!212 &212936741612112568
 SpriteRenderer:
   m_ObjectHideFlags: 1

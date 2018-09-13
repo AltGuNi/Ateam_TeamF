@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4694166849683794}
   - component: {fileID: 212823857842685100}
   - component: {fileID: 114571743434640696}
-  - component: {fileID: 114328294595468700}
   - component: {fileID: 61003289278093338}
+  - component: {fileID: 114529977493982648}
+  - component: {fileID: 114841507471069778}
   m_Layer: 0
   m_Name: PlayerWood
   m_TagString: Player
@@ -68,7 +69,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114328294595468700
+--- !u!114 &114529977493982648
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -76,14 +77,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1414547182179154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab379f5fad108764c94d9d9ec64a008c, type: 3}
+  m_Script: {fileID: 11500000, guid: 144a8e00d216e0241b9034195b3025bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  attribute: 3
-  HP: 0
-  attack: 0
-  defence: 0
+  status:
+    type: 1
+    attribute: 3
+    HP: 0
+    attack: 0
+    defence: 0
 --- !u!114 &114571743434640696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,6 +119,22 @@ MonoBehaviour:
   minDistance: 1
   movementThreshold: 0.5
   direction: 0
+--- !u!114 &114841507471069778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414547182179154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2eecf3caa6d22543b2baa588a978ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteType: 0
+  spriteList:
+    stand: {fileID: 21300000, guid: bb3068fc83bfc524c98ea99c97b14446, type: 3}
+    icon: {fileID: 0}
+    run: {fileID: 0}
 --- !u!212 &212823857842685100
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -151,13 +169,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bb3068fc83bfc524c98ea99c97b14446, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.42068958, a: 0}
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0

@@ -99,10 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55aa91313ed5c9e44bcdf7e80c797384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attribute: 2
-  HP: 0
-  attack: 0
-  defence: 0
+  status:
+    type: 0
+    attribute: 2
+    HP: 0
+    attack: 0
+    defence: 0
 --- !u!212 &212563185149801746
 SpriteRenderer:
   m_ObjectHideFlags: 1

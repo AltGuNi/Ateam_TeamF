@@ -32,7 +32,7 @@ public class BulletGenerator : MonoBehaviour {
     {
         GameObject instance;
 
-        switch (obj.attribute)
+        switch (obj.status.attribute)
         {
             case BeseObject.AttributeData.Nomal:
                 instance = Instantiate(nomalbulletPrefab);
@@ -59,6 +59,6 @@ public class BulletGenerator : MonoBehaviour {
         instance.GetComponent<Bullet>().Velocity = new Vector2(dir.x * speed.x, dir.y * speed.y);
 
         // タイプを設定する
-        instance.GetComponent<Bullet>().type = obj.type;
+        instance.GetComponent<Bullet>().status.type = obj.status.type;
     }
 }

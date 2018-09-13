@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4602076443812532}
   - component: {fileID: 212143304746809920}
   - component: {fileID: 114640086818652726}
-  - component: {fileID: 114653934578667504}
   - component: {fileID: 61040121430164310}
+  - component: {fileID: 114224971331105428}
+  - component: {fileID: 114959677782042952}
   m_Layer: 0
   m_Name: PlayerFire
   m_TagString: Player
@@ -68,6 +69,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114224971331105428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816684989317158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144a8e00d216e0241b9034195b3025bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status:
+    type: 1
+    attribute: 1
+    HP: 0
+    attack: 0
+    defence: 0
 --- !u!114 &114640086818652726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,7 +119,7 @@ MonoBehaviour:
   minDistance: 1
   movementThreshold: 0.5
   direction: 0
---- !u!114 &114653934578667504
+--- !u!114 &114959677782042952
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -109,14 +127,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1816684989317158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab379f5fad108764c94d9d9ec64a008c, type: 3}
+  m_Script: {fileID: 11500000, guid: e2eecf3caa6d22543b2baa588a978ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  attribute: 1
-  HP: 0
-  attack: 0
-  defence: 0
+  spriteType: 0
+  spriteList:
+    stand: {fileID: 21300000, guid: bb3068fc83bfc524c98ea99c97b14446, type: 3}
+    icon: {fileID: 0}
+    run: {fileID: 0}
 --- !u!212 &212143304746809920
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -151,13 +169,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bb3068fc83bfc524c98ea99c97b14446, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
