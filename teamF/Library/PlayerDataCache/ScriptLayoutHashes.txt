@@ -1,6 +1,6 @@
-Android
+WebGL
 PlayerPath?
-C:/Users/s172074/Documents/test/test.apk
+C:/Users/s172074/Documents/test
 SceneListBegin?
 Assets/test.unity
 SceneListEnd?
