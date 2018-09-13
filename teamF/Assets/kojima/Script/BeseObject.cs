@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class BeseObject : MonoBehaviour {
     public enum TypeData
@@ -20,17 +21,12 @@ public class BeseObject : MonoBehaviour {
 
         AttributeMax
     };
-
-    [SerializeField]
-    TypeData type = TypeData.None;
-    [SerializeField]
-    AttributeData attribute = AttributeData.Nomal;
-    [SerializeField]
-    float HP = 0.0f;
-    [SerializeField]
-    float attack = 0.0f;
-    [SerializeField]
-    float defence = 0.0f;
+    
+    public TypeData type = TypeData.None;
+    public AttributeData attribute = AttributeData.Nomal;
+    public float HP = 0.0f;
+    public float attack = 0.0f;
+    public float defence = 0.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -41,15 +37,30 @@ public class BeseObject : MonoBehaviour {
 	void Update () {
 		
 	}
+}
 
-    public TypeData Type
+// インスペクタの拡張
+[CanEditMultipleObjects]
+[CustomEditor(typeof(BeseObject), true)]
+public class BeseObjectInspector : Editor
+{
+    bool showPosition = false;
+    Player character = null;
+
+    void OnEnable()
     {
-        get { return type; }
-        set { type = value; }
+        //Character コンポーネントを取得
+        character = (Player)target;
     }
-    public AttributeData Attribute
+
+    public override void OnInspectorGUI()
     {
-        get { return attribute; }
-        set { attribute = value; }
+        showPosition = EditorGUILayout.Foldout(showPosition, "ステータス");
+        
+        if (showPosition)
+        {
+            base.OnInspectorGUI();
+            //character.type = (BeseObject.TypeData)EditorGUILayout.EnumPopup("オブジェクトの種類", character.type);
+        }
     }
 }

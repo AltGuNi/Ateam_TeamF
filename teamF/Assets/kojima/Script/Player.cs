@@ -5,6 +5,8 @@ using System;
 using TouchScript.Gestures;
 
 public class Player : BeseObject {
+
+    
     
     BulletGenerator bulletGenerator;
 

@@ -26,6 +26,6 @@ public class AtributeBackGround : BeseObject{
 
     private void OnPressed(object sender, EventArgs e)
     {
-        GameObject.Find("Player").GetComponent<Player>().Attribute = Attribute;
+        GameObject.Find("Player").GetComponent<Player>().attribute = attribute;
     }
 }

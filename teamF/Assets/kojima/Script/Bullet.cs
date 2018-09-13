@@ -17,13 +17,13 @@ public class Bullet : BeseObject {
         switch (collide.gameObject.tag)
         {
             case "Enemy":
-                if(Type != collide.gameObject.GetComponent<Enemy>().Type)
+                if(type != collide.gameObject.GetComponent<Enemy>().type)
                 {
                     Destroy(this.gameObject);
                 }
                 break;
             case "Player":
-                if (Type != collide.gameObject.GetComponent<Player>().Type)
+                if (type != collide.gameObject.GetComponent<Player>().type)
                 {
                     Destroy(this.gameObject);
                 }
