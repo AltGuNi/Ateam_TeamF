@@ -4,10 +4,11 @@ using UnityEngine;
 using System;
 using TouchScript.Gestures;
 
-public class AtributeBackGround : BeseObject{
-    
-	// Use this for initialization
-	void Start () {
+public class AtributeBackGround : MonoBehaviour
+{
+    public BeseObject.AttributeData attribute = BeseObject.AttributeData.Nomal;
+    // Use this for initialization
+    void Start () {
     }
 	
 	// Update is called once per frame
@@ -26,6 +27,6 @@ public class AtributeBackGround : BeseObject{
 
     private void OnPressed(object sender, EventArgs e)
     {
-        GameObject.Find("Player").GetComponent<Character>().status.attribute = status.attribute;
+        GameObject.Find("Player").GetComponent<Character>().status.attribute = attribute;
     }
 }

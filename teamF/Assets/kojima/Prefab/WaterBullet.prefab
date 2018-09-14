@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61615014763123036}
   m_Layer: 0
   m_Name: WaterBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,12 +99,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55aa91313ed5c9e44bcdf7e80c797384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colideType: 0
   status:
-    type: 0
+    bulletAttribute: 0
     attribute: 2
+    attackType: 0
     HP: 0
     attack: 0
     defence: 0
+    bounceSpeed: 0
 --- !u!212 &212563185149801746
 SpriteRenderer:
   m_ObjectHideFlags: 1

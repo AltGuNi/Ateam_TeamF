@@ -58,7 +58,7 @@ public class BulletGenerator : MonoBehaviour {
         // 速度
         instance.GetComponent<Bullet>().Velocity = new Vector2(dir.x * speed.x, dir.y * speed.y);
 
-        // タイプを設定する
-        instance.GetComponent<Bullet>().status.type = obj.status.type;
+        // 当たり判定の種類を設定
+        instance.GetComponent<Bullet>().colideType = obj.GetComponent<BeseObject>().colideType;
     }
 }

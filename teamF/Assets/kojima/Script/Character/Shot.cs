@@ -26,7 +26,6 @@ public class Shot : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Debug.Log(flag);
         if (flag)
         {
             count += Time.deltaTime;

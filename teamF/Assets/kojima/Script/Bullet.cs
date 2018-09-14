@@ -14,20 +14,21 @@ public class Bullet : BeseObject {
 
     void OnTriggerEnter2D(Collider2D collide)
     {
-        switch (collide.gameObject.tag)
+        if (collide.gameObject.tag == "Bullet")
         {
-            case "Enemy":
-                if(status.type != collide.gameObject.GetComponent<Enemy>().status.type)
-                {
-                    Destroy(this.gameObject);
-                }
-                break;
-            case "Player":
-                if (status.type != collide.gameObject.GetComponent<Character>().status.type)
-                {
-                    Destroy(this.gameObject);
-                }
-                break;
+            return;
+        }
+        if (collide.gameObject.GetComponent<BeseObject>())
+        {
+            if (BeseObject.CollideType.Neutral == collide.gameObject.GetComponent<BeseObject>().colideType)
+            {
+                Destroy(this.gameObject);
+            }
+            else if (colideType != collide.gameObject.GetComponent<BeseObject>().colideType &&
+                BeseObject.CollideType.None != collide.gameObject.GetComponent<BeseObject>().colideType)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 
