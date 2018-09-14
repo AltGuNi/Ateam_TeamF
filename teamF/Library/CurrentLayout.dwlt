@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -67,10 +67,10 @@ MonoBehaviour:
     y: 0
     width: 313
     height: 627
-  m_MinSize: {x: 202, y: 421}
-  m_MaxSize: {x: 4002, y: 8021}
+  m_MinSize: {x: 202, y: 442}
+  m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 43
+  controlID: 97
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -92,7 +92,7 @@ MonoBehaviour:
     y: 0
     width: 1280
     height: 677
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &5
 MonoBehaviour:
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 30
     width: 1280
     height: 627
-  m_MinSize: {x: 738, y: 421}
-  m_MaxSize: {x: 22008, y: 10021}
+  m_MinSize: {x: 736, y: 442}
+  m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 114
+  controlID: 134
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -255,8 +255,8 @@ MonoBehaviour:
     y: 0
     width: 313
     height: 321
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -346,9 +346,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 223efeff
-    m_LastClickedID: -115166
-    m_ExpandedIDs: 7cfbffff00000000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 2efaffff00000000f62d0000782e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -444,7 +444,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/kojima/Prefab
+    - Assets/kojima/Script/Character
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -455,7 +455,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e6280000
     m_LastClickedID: 10470
-    m_ExpandedIDs: 00000000ce2a0000182b00004c2b0000b02b0000d02b0000e62b0000342c0000522c00005e2c0000e62c0000682d00007c2d00009a2d0000ae2d0000b82d0000
+    m_ExpandedIDs: 000000003a2a0000842a0000b62a0000122b0000302b0000462b0000922b0000ac2b0000b82b0000de2b0000402c0000be2c0000d22c0000f02c0000002d00000a2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -483,18 +483,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ce2a0000182b00004c2b0000b02b0000d02b0000e62b0000342c0000522c00005e2c0000842c0000e62c0000682d00007c2d00009a2d0000ae2d0000b82d0000
+    m_ExpandedIDs: 000000003a2a0000842a0000b62a0000122b0000302b0000462b0000922b0000ac2b0000b82b0000de2b0000402c0000be2c0000d22c0000f02c0000002d00000a2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: wood
-      m_OriginalName: wood
+      m_Name: CharacterQuestIcon
+      m_OriginalName: CharacterQuestIcon
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 11056
+      m_UserData: 18760
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -643,14 +643,14 @@ MonoBehaviour:
     height: 300
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 458.64655730648474
+  lastFramingTime: 4494.4558140939835
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.3425704, y: 1.0457737, z: 0.1640625}
+    m_Target: {x: 68.86093, y: 112.787186, z: 3.8054674}
     speed: 2
-    m_Value: {x: -0.3425704, y: 1.0457737, z: 0.1640625}
+    m_Value: {x: 68.86093, y: 112.787186, z: 3.8054674}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -678,9 +678,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.5218506
+    m_Target: 127.52284
     speed: 2
-    m_Value: 4.5218506
+    m_Value: 127.52284
   m_Ortho:
     m_Target: 1
     speed: 2

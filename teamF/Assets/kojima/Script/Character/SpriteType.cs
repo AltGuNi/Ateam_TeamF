@@ -9,10 +9,12 @@ public class SpriteType : MonoBehaviour {
     {
         Stand = 0,
         Icon,
-        Run
+        Run,
+
+        None
     }
 
-    public Type spriteType;
+    public Type spriteType = Type.None;
 
     [System.Serializable]
     public class SpriteList
@@ -45,6 +47,4 @@ public class SpriteType : MonoBehaviour {
 	void Update () {
 		
 	}
-
-
 }

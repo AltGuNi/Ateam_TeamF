@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4929842824248860}
   - component: {fileID: 212912641282520518}
   - component: {fileID: 61968074579049758}
-  - component: {fileID: 114829755561313352}
+  - component: {fileID: 114840382111533758}
   - component: {fileID: 114472060721225094}
   m_Layer: 0
   m_Name: water
@@ -103,7 +103,7 @@ MonoBehaviour:
     m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   ignoreChildren: 0
---- !u!114 &114829755561313352
+--- !u!114 &114840382111533758
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -111,10 +111,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1834817101056590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a8dfefdf3508a049bdd6d91f45aa8a5, type: 3}
+  m_Script: {fileID: 11500000, guid: ecb1de765e2e7fd4d87539a4e247fdd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attribute: 2
+  elements: 2
 --- !u!212 &212912641282520518
 SpriteRenderer:
   m_ObjectHideFlags: 1

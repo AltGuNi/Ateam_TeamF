@@ -32,18 +32,18 @@ public class BulletGenerator : MonoBehaviour {
     {
         GameObject instance;
 
-        switch (obj.status.attribute)
+        switch (obj.status.bulletElement)
         {
-            case BeseObject.AttributeData.Nomal:
+            case BeseObject.Elements.Nomal:
                 instance = Instantiate(nomalbulletPrefab);
                 break;
-            case BeseObject.AttributeData.Fire:
+            case BeseObject.Elements.Fire:
                 instance = Instantiate(firebulletPrefab);
                 break;
-            case BeseObject.AttributeData.Water:
+            case BeseObject.Elements.Water:
                 instance = Instantiate(waterbulletPrefab);
                 break;
-            case BeseObject.AttributeData.Wood:
+            case BeseObject.Elements.Wood:
                 instance = Instantiate(woodbulletPrefab);
                 break;
 
@@ -60,5 +60,8 @@ public class BulletGenerator : MonoBehaviour {
 
         // 当たり判定の種類を設定
         instance.GetComponent<Bullet>().colideType = obj.GetComponent<BeseObject>().colideType;
+
+        // ステータスの反映
+        instance.GetComponent<Bullet>().status.valueState = obj.GetComponent<BeseObject>().status.valueState;
     }
 }
