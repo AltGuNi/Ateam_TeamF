@@ -1,11 +1,12 @@
 WebGL
 PlayerPath?
-C:/Users/s172074/Documents/test
+C:/Users/s172074/Documents/TeamF
 SceneListBegin?
 Assets/test.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.UI.TextureSwitch
 70d9a5dfdd92296522528a98d2f5ed68 Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.PenCursor
+201d4b0d9750ff3946ee58ca328cac26 Assembly-CSharp.dll:.Character
 0189d52198025e02a31dab4f2f816848 Assembly-CSharp.dll:TouchScript.Gestures.TransformGestures.TransformGesture
 14a65f7b8326a60ff309254e19582b7b Assembly-CSharp.dll:TouchScript.Examples.Tap.Kick
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -20,9 +21,10 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerInfo
 4db4eddbab184d463c1433e1bb2af81f Assembly-CSharp.dll:TouchScript.Examples.UI.SetColor
 08712033bfb8d4fd2842041f9a20ded7 Assembly-CSharp.dll:TouchScript.Examples.RawInput.Spawner
-a5b81e0f20ffe031abcd31fce39b67aa Assembly-CSharp.dll:.Bullet
+201d4b0d9750ff3946ee58ca328cac26 Assembly-CSharp.dll:.Bullet
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Core.LayerManagerInstance
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -92,6 +94,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 0416d95da6ab95ae02bbe67973ac991e Assembly-CSharp.dll:TouchScript.Examples.Colors.Colors
 dac154b38532fd5a92a95b0a9a386115 Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.ObjectCursor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Examples.Multiuser.Logo
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:NCMB.NCMBManager
 03fd9fb453aaf08fa0b51d0e62cff2f4 Assembly-CSharp.dll:.Highlight
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 4b12dd839b2293f8457cd67cc3610b85 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -123,7 +126,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 97a09ec39aea018ce7d9277bd2f43161 Assembly-CSharp.dll:TouchScript.Layers.StandardLayer
-a5b81e0f20ffe031abcd31fce39b67aa Assembly-CSharp.dll:.BeseObject
+201d4b0d9750ff3946ee58ca328cac26 Assembly-CSharp.dll:.BeseObject
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 d01076a6a1818355740b0f2f03649d29 Assembly-CSharp.dll:TouchScript.Examples.Photos.Container
 daa565a4bc00993781a7c9f74a405633 Assembly-CSharp.dll:TouchScript.Gestures.FlickGesture
@@ -144,7 +147,9 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Examples.Checkers.Board
 a2398cab0afec05bd8b6b70c007a516c Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.UI.GradientTexture
+2725ca7aa383d4542b0fbf7d8aff56c1 Assembly-CSharp.dll:NCMB.NCMBSettings
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.GestureManager
+87d84637249e3733a213f21d4b807aab Assembly-CSharp.dll:.Shot
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Core.DebuggableMonoBehaviour
 42bbd8dadc66de980ed7ab69a5fd1258 Assembly-CSharp.dll:TouchScript.Gestures.PressGesture
 0fd6aafde779927819d0d509e0bdfec9 Assembly-CSharp.dll:TouchScript.Gestures.MetaGesture
@@ -192,6 +197,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 5eeacec8e729f2f59963b7cac59021a8 Assembly-CSharp.dll:TouchScript.Layers.FullscreenLayer
+9bbbd4dd44792c040b216c9121860032 Assembly-CSharp.dll:.SpriteType
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 9dc41ecfefe71e0d0e207b5650949483 Assembly-CSharp.dll:TouchScript.Devices.Display.GenericDisplayDevice
 257e7db485b6dd0c687101247ab95a1b Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.TouchCursor
@@ -200,18 +206,17 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Examples.Cube.Init
 99fb603e20780b52805fbdf92487e554 Assembly-CSharp.dll:TouchScript.Behaviors.Transformer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Examples.Cube.CustomPointerProxy
-33227001ac3cb2e0369b605ca6cae863 Assembly-CSharp.dll:.CharacterSelect
-a5b81e0f20ffe031abcd31fce39b67aa Assembly-CSharp.dll:.AtributeBackGround
+201d4b0d9750ff3946ee58ca328cac26 Assembly-CSharp.dll:.AtributeBackGround
 60eed870167e94563437af95bcc883f9 Assembly-CSharp.dll:TouchScript.Examples.Portal.Rotator
 4f52fb13c8876d1fc6a0a4110faf10fc Assembly-CSharp.dll:TouchScript.Gestures.TransformGestures.ScreenTransformGesture
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Core.GestureManagerInstance
 6ec273a5fcd8b0a1a1b85b7bebb4a14a Assembly-CSharp.dll:TouchScript.Layers.UI.TouchScriptInputModule
 25cb51b79761cf69e146997ca3f33ce1 Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.MouseCursor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Behaviors.UI.OverHelper
-a5b81e0f20ffe031abcd31fce39b67aa Assembly-CSharp.dll:.Player
 2427cde986b9c1964687738f93a0f5bf Assembly-CSharp.dll:TouchScript.Gestures.TapGesture
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShowMe
-bce575f6f95698e010afd1d65ca9b582 Assembly-CSharp.dll:.Enemy
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.test
+7fe7c8110a147b41eb8383f8ef6418c9 Assembly-CSharp.dll:.Enemy
 354799ab7253e8d83914c27d4dc65f56 Assembly-CSharp.dll:TouchScript.Examples.Portal.Spawner
 5fbda2558649918021d6a2f6aa46422d Assembly-CSharp.dll:.BackGround
 ffcb82fccd9242220f3d88cf27f8bfe3 Assembly-CSharp.dll:TouchScript.Gestures.TransformGestures.PinnedTransformGesture
