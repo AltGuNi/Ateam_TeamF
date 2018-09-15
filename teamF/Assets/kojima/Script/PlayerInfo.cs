@@ -34,10 +34,10 @@ public class PlayerInfo : MonoBehaviour {
         {
             if(chara[i])
             {
-                status.valueState.attack += chara[i].status.valueState.attack;
+                status.valueStatus.attack += chara[i].status.valueStatus.attack;
             }
         }
-        player.status.valueState = status.valueState;
+        player.status.valueStatus = status.valueStatus;
 	}
 	
 	// Update is called once per frame

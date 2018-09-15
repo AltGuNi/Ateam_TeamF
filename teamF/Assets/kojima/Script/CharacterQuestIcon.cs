@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterQuestIcon : MonoBehaviour {
 
@@ -16,6 +17,13 @@ public class CharacterQuestIcon : MonoBehaviour {
 
     public Skill skill;
 
+    [SerializeField, Space(10)]
+    public Sprite icon;
+    public Sprite iconFrame;
+    public Sprite iconFramePlay;
+
+    Image baseImage;                        // アイコンの背景
+
     bool isSkill = false;                   // スキル発動中の場合はtrue
     float timeToActivate = 0.0f;            // スキル発動可能までの残り時間
     float timeToFinish = 0.0f;              // スキル終了までの時間
@@ -23,7 +31,12 @@ public class CharacterQuestIcon : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        timeToActivate = playerInfo.chara[(int)charaNum].status.valueState.timeToActivate;
+        timeToActivate = playerInfo.chara[(int)charaNum].status.skillStatus.timeToActivate;
+        baseImage = gameObject.transform.GetChild(0).GetComponent<Image>();
+
+        // アイコン画像の設定
+        gameObject.transform.GetChild(2).GetComponent<Image>().sprite = icon;
+        gameObject.transform.GetChild(2).GetComponent<Image>().color = new Color(1, 1, 1, 1);
     }
 
     // Update is called once per frame
@@ -46,16 +59,23 @@ public class CharacterQuestIcon : MonoBehaviour {
                 timeToFinish = 0.0f;
                 isSkill = false;
                 FinishSkill();
-                timeToActivate = playerInfo.chara[(int)charaNum].status.valueState.timeToActivate;
+                timeToActivate = playerInfo.chara[(int)charaNum].status.skillStatus.timeToActivate;
             }
         }
+
+        // 切り捨て後の値
+        float floorTime = Mathf.Floor(timeToActivate * 100.0f);
+        float floorTime2 = Mathf.Floor(playerInfo.chara[(int)charaNum].status.skillStatus.timeToActivate * 100.0f);
+        
+        baseImage.fillAmount = 1.0f - floorTime / floorTime2;
     }
 
 
     // スキルの発動時
     public void ActivateSkill()
     {
-        playerInfo.player.status.valueState.attack += skill.UpATK;
+        gameObject.transform.GetChild(1).GetComponent<Image>().sprite = iconFramePlay;
+        playerInfo.player.status.valueStatus.attack += skill.UpATK;
     }
 
     // スキルの発動中
@@ -66,7 +86,8 @@ public class CharacterQuestIcon : MonoBehaviour {
     // スキルの終了時
     public void FinishSkill()
     {
-        playerInfo.player.status.valueState.attack -= skill.UpATK;
+        gameObject.transform.GetChild(1).GetComponent<Image>().sprite = iconFrame;
+        playerInfo.player.status.valueStatus.attack -= skill.UpATK;
     }
 
 
@@ -77,7 +98,7 @@ public class CharacterQuestIcon : MonoBehaviour {
         {
             isSkill = true;
             ActivateSkill();
-            timeToFinish = playerInfo.chara[(int)charaNum].status.valueState.timeToFinish;
+            timeToFinish = playerInfo.chara[(int)charaNum].status.skillStatus.timeToFinish;
         }
     }
 }

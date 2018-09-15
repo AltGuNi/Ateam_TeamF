@@ -62,6 +62,6 @@ public class BulletGenerator : MonoBehaviour {
         instance.GetComponent<Bullet>().colideType = obj.GetComponent<BeseObject>().colideType;
 
         // ステータスの反映
-        instance.GetComponent<Bullet>().status.valueState = obj.GetComponent<BeseObject>().status.valueState;
+        instance.GetComponent<Bullet>().status.valueStatus = obj.GetComponent<BeseObject>().status.valueStatus;
     }
 }

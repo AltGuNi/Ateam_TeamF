@@ -101,13 +101,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colideType: 0
   status:
-    bulletAttribute: 0
-    attribute: 3
+    bulletElement: 0
+    SpecialtyElement: 0
     attackType: 0
-    HP: 0
-    attack: 0
-    defence: 0
-    bounceSpeed: 0
+    valueStatus:
+      HP: 0
+      attack: 0
+      defence: 0
+      bounceSpeed: 0
+    skillStatus:
+      timeToActivate: 0
+      timeToFinish: 0
+      UpATK: 0
 --- !u!212 &212091934589972672
 SpriteRenderer:
   m_ObjectHideFlags: 1
