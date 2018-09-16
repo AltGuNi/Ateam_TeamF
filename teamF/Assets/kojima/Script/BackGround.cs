@@ -47,6 +47,7 @@ public class BackGround : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        // 画面外に出る場合、新しく作る
         if (!instanceFlag &&
             gameObject.transform.position.y < instanceLine)
         {
@@ -55,6 +56,7 @@ public class BackGround : MonoBehaviour {
             obj.gameObject.transform.position = new Vector2(0.0f, startLine);
             obj.transform.SetParent(GameObject.Find("LongPressArea").transform);
         }
+        // スクロールが終わった場合、消す
 		if(gameObject.transform.position.y < endLine)
         {
             Destroy(this.gameObject);

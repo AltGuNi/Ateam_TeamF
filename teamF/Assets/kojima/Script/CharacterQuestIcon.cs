@@ -9,14 +9,6 @@ public class CharacterQuestIcon : MonoBehaviour {
 
     public PlayerInfo.CharaNum charaNum;
 
-    [System.Serializable]
-    public class Skill
-    {
-        public float UpATK = 0.0f;
-    };
-
-    public Skill skill;
-
     [SerializeField, Space(10)]
     public Sprite icon;
     public Sprite iconFrame;
@@ -50,6 +42,7 @@ public class CharacterQuestIcon : MonoBehaviour {
         {
             if (!isSkill)
             {
+                // スキル発動までの時間を進める
                 timeToActivate -= Time.deltaTime;
                 if (timeToActivate <= 0.0f)
                 {
@@ -58,6 +51,7 @@ public class CharacterQuestIcon : MonoBehaviour {
             }
             else
             {
+                // スキル終了までの時間を進める
                 timeToFinish -= Time.deltaTime;
                 UpdateSkill();
                 if (timeToFinish <= 0.0f)
@@ -69,6 +63,7 @@ public class CharacterQuestIcon : MonoBehaviour {
                 }
             }
 
+            // アイコンの背景の処理
             // 切り捨て後の値
             float floorTime = Mathf.Floor(timeToActivate * 100.0f);
             float floorTime2 = Mathf.Floor(playerInfo.chara[(int)charaNum].status.skillStatus.timeToActivate * 100.0f);
@@ -82,7 +77,7 @@ public class CharacterQuestIcon : MonoBehaviour {
     public void ActivateSkill()
     {
         gameObject.transform.GetChild(1).GetComponent<Image>().sprite = iconFramePlay;
-        playerInfo.player.status.valueStatus.attack += skill.UpATK;
+        playerInfo.player.status.valueStatus.attack += playerInfo.chara[(int)charaNum].status.skillStatus.UpATK;
     }
 
     // スキルの発動中
@@ -94,7 +89,7 @@ public class CharacterQuestIcon : MonoBehaviour {
     public void FinishSkill()
     {
         gameObject.transform.GetChild(1).GetComponent<Image>().sprite = iconFrame;
-        playerInfo.player.status.valueStatus.attack -= skill.UpATK;
+        playerInfo.player.status.valueStatus.attack -= playerInfo.chara[(int)charaNum].status.skillStatus.UpATK;
     }
 
 

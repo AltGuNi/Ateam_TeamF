@@ -38,6 +38,7 @@ public class BeseObject : MonoBehaviour {
         public float attack;            // 攻撃
         public float defence ;          // 防御
         public float bounceSpeed;       // 弾速
+        public float duration;          // 発射間隔
     };
 
     // スキルのステータス

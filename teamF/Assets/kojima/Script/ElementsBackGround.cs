@@ -20,6 +20,7 @@ public class ElementsBackGround : MonoBehaviour {
         int totalRate = 0;
         int random = UnityEngine.Random.Range(0, 101);
 
+        // 属性を決める
         BackGround backGround = gameObject.transform.parent.GetComponent<BackGround>();
         for (int i = 0; i < backGround.elementsSprite.Length; i++)
         {
@@ -30,6 +31,7 @@ public class ElementsBackGround : MonoBehaviour {
             }
             totalRate += backGround.elementsSprite[i].rate;
         }
+        // 画像を決める
         if (elementInfo != null)
         {
             random = UnityEngine.Random.Range(0, elementInfo.sprite.Length);

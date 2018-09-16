@@ -6,22 +6,20 @@ using TouchScript.Gestures;
 
 public class Shot : MonoBehaviour 
 {
-
     BulletGenerator bulletGenerator;
-
-    public LongPressGesture longPressGesture;
-    public ReleaseGesture releaseGesture;
-
-    public float shotInterval = 0.3f;
+    BeseObject baseObject;
 
     [HideInInspector]
     public bool flag = false;
     float count = 0.0f;
-
+    [HideInInspector]
+    public Vector2 dir = Vector2.zero;
+    
     // Use this for initialization
     void Start () {
         bulletGenerator = GameObject.Find("BulletGenerator").GetComponent<BulletGenerator>();
-        count = shotInterval;
+        baseObject = this.gameObject.GetComponent<BeseObject>();
+        count = baseObject.status.valueStatus.duration;
     }
 	
 	// Update is called once per frame
@@ -30,47 +28,15 @@ public class Shot : MonoBehaviour
         if (flag)
         {
             count += Time.deltaTime;
-            if (count > this.gameObject.GetComponent<Character>().status.valueStatus.bounceSpeed)
+            if (count > baseObject.status.valueStatus.duration)
             {
-                Vector2 pos = Camera.main.ScreenToWorldPoint(releaseGesture.ScreenPosition);
-                float x = pos.x - gameObject.transform.position.x;
-                float y = pos.y - gameObject.transform.position.y;
-
-                //// 方向
-                float angle = Mathf.Atan2(y, x);
-                float dirX = Mathf.Cos(angle);
-                float dirY = Mathf.Sin(angle);
-                bulletGenerator.Instance(this.gameObject.GetComponent<Character>(), new Vector2(dirX, dirY));
+                bulletGenerator.Instance(this.gameObject.GetComponent<Character>(), new Vector2(dir.x, dir.y));
                 count = 0.0f;
             }
         }
         else
         {
-            count = shotInterval;
+            count = baseObject.status.valueStatus.duration;
         }
     }
-    private void OnEnable()
-    {
-        longPressGesture.LongPressed += OnLongPressed;
-        releaseGesture.Released += OnReleased;
-    }
-
-    private void OnDisable()
-    {
-        longPressGesture.LongPressed -= OnLongPressed;
-        releaseGesture.Released -= OnReleased;
-    }
-
-    // 長押し最初の処理
-    private void OnLongPressed(object sender, EventArgs e)
-    {
-        flag = true;
-    }
-
-    // 長押しから話した時の処理
-    private void OnReleased(object sender, EventArgs e)
-    {
-        flag = false;
-    }
-    
 }

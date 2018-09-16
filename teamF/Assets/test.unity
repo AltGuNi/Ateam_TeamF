@@ -910,8 +910,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInfo: {fileID: 202599416}
   charaNum: 3
-  skill:
-    UpATK: 10
   icon: {fileID: 21300000, guid: 76213d786b6e21347a8ba273f81a2d8d, type: 3}
   iconFrame: {fileID: 21300000, guid: 73755ebfc108e2a42a468439a0b01e28, type: 3}
   iconFramePlay: {fileID: 21300000, guid: 96b9bd0cd11b9044b8c0487a6a1d9b8b, type: 3}
@@ -979,6 +977,7 @@ MonoBehaviour:
       attack: 0
       defence: 0
       bounceSpeed: 0
+      duration: 0
     skillStatus:
       timeToActivate: 0
       timeToFinish: 0
@@ -2124,8 +2123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInfo: {fileID: 202599416}
   charaNum: 1
-  skill:
-    UpATK: 10
   icon: {fileID: 21300000, guid: 76213d786b6e21347a8ba273f81a2d8d, type: 3}
   iconFrame: {fileID: 21300000, guid: 73755ebfc108e2a42a468439a0b01e28, type: 3}
   iconFramePlay: {fileID: 21300000, guid: 96b9bd0cd11b9044b8c0487a6a1d9b8b, type: 3}
@@ -3865,7 +3862,8 @@ MonoBehaviour:
       HP: 0
       attack: 10
       defence: 0
-      bounceSpeed: 0.5
+      bounceSpeed: 5
+      duration: 0.2
     skillStatus:
       timeToActivate: 3
       timeToFinish: 5
@@ -9373,8 +9371,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInfo: {fileID: 202599416}
   charaNum: 2
-  skill:
-    UpATK: 10
   icon: {fileID: 21300000, guid: 76213d786b6e21347a8ba273f81a2d8d, type: 3}
   iconFrame: {fileID: 21300000, guid: 73755ebfc108e2a42a468439a0b01e28, type: 3}
   iconFramePlay: {fileID: 21300000, guid: 96b9bd0cd11b9044b8c0487a6a1d9b8b, type: 3}
@@ -9944,8 +9940,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInfo: {fileID: 202599416}
   charaNum: 0
-  skill:
-    UpATK: 10
   icon: {fileID: 21300000, guid: 76213d786b6e21347a8ba273f81a2d8d, type: 3}
   iconFrame: {fileID: 21300000, guid: 73755ebfc108e2a42a468439a0b01e28, type: 3}
   iconFramePlay: {fileID: 21300000, guid: 96b9bd0cd11b9044b8c0487a6a1d9b8b, type: 3}
@@ -11399,9 +11393,9 @@ GameObject:
   - component: {fileID: 1883883888}
   - component: {fileID: 1883883887}
   - component: {fileID: 1883883885}
-  - component: {fileID: 1883883889}
   - component: {fileID: 1883883890}
   - component: {fileID: 1883883884}
+  - component: {fileID: 1883883886}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -11456,10 +11450,24 @@ MonoBehaviour:
       attack: 0
       defence: 0
       bounceSpeed: 0
+      duration: 0
     skillStatus:
       timeToActivate: 0
       timeToFinish: 0
       UpATK: 0
+--- !u!114 &1883883886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1883883883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb2d2a6c7b3ed64688fbd9daab8024b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  longPressGesture: {fileID: 112617290}
+  releaseGesture: {fileID: 112617292}
 --- !u!212 &1883883887
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11519,22 +11527,6 @@ Transform:
   m_Father: {fileID: 112617291}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1883883889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1883883883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2eecf3caa6d22543b2baa588a978ce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteType: 0
-  spriteList:
-    stand: {fileID: 21300000, guid: b245826ecc1a1064d94a6500d02796af, type: 3}
-    icon: {fileID: 0}
-    run: {fileID: 0}
 --- !u!114 &1883883890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11546,10 +11538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc1c4a6b14eae441823ea314ed54414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longPressGesture: {fileID: 112617290}
-  releaseGesture: {fileID: 112617292}
-  shotInterval: 0.5
   flag: 0
+  dir: {x: 0, y: 0}
 --- !u!1 &1890313105
 GameObject:
   m_ObjectHideFlags: 0
