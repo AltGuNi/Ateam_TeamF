@@ -31,43 +31,50 @@ public class CharacterQuestIcon : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        timeToActivate = playerInfo.chara[(int)charaNum].status.skillStatus.timeToActivate;
-        baseImage = gameObject.transform.GetChild(0).GetComponent<Image>();
+        if (playerInfo.chara[(int)charaNum])
+        {
+            timeToActivate = playerInfo.chara[(int)charaNum].status.skillStatus.timeToActivate;
+            baseImage = gameObject.transform.GetChild(0).GetComponent<Image>();
 
-        // アイコン画像の設定
-        gameObject.transform.GetChild(2).GetComponent<Image>().sprite = icon;
-        gameObject.transform.GetChild(2).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+            // アイコン画像の設定
+            gameObject.transform.GetChild(2).GetComponent<Image>().sprite = icon;
+            gameObject.transform.GetChild(2).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isSkill)
-        {
-            timeToActivate -= Time.deltaTime;
-            if (timeToActivate <= 0.0f)
-            {
-                timeToActivate = 0.0f;
-            }
-        }
-        else
-        {
-            timeToFinish -= Time.deltaTime;
-            UpdateSkill();
-            if (timeToFinish <= 0.0f)
-            {
-                timeToFinish = 0.0f;
-                isSkill = false;
-                FinishSkill();
-                timeToActivate = playerInfo.chara[(int)charaNum].status.skillStatus.timeToActivate;
-            }
-        }
 
-        // 切り捨て後の値
-        float floorTime = Mathf.Floor(timeToActivate * 100.0f);
-        float floorTime2 = Mathf.Floor(playerInfo.chara[(int)charaNum].status.skillStatus.timeToActivate * 100.0f);
-        
-        baseImage.fillAmount = 1.0f - floorTime / floorTime2;
+        if (playerInfo.chara[(int)charaNum])
+        {
+            if (!isSkill)
+            {
+                timeToActivate -= Time.deltaTime;
+                if (timeToActivate <= 0.0f)
+                {
+                    timeToActivate = 0.0f;
+                }
+            }
+            else
+            {
+                timeToFinish -= Time.deltaTime;
+                UpdateSkill();
+                if (timeToFinish <= 0.0f)
+                {
+                    timeToFinish = 0.0f;
+                    isSkill = false;
+                    FinishSkill();
+                    timeToActivate = playerInfo.chara[(int)charaNum].status.skillStatus.timeToActivate;
+                }
+            }
+
+            // 切り捨て後の値
+            float floorTime = Mathf.Floor(timeToActivate * 100.0f);
+            float floorTime2 = Mathf.Floor(playerInfo.chara[(int)charaNum].status.skillStatus.timeToActivate * 100.0f);
+
+            baseImage.fillAmount = 1.0f - floorTime / floorTime2;
+        }
     }
 
 
@@ -94,11 +101,14 @@ public class CharacterQuestIcon : MonoBehaviour {
 
     public void OnClick()
     {
-        if (timeToActivate <= 0.0f && !isSkill)
+        if (playerInfo.chara[(int)charaNum])
         {
-            isSkill = true;
-            ActivateSkill();
-            timeToFinish = playerInfo.chara[(int)charaNum].status.skillStatus.timeToFinish;
+            if (timeToActivate <= 0.0f && !isSkill)
+            {
+                isSkill = true;
+                ActivateSkill();
+                timeToFinish = playerInfo.chara[(int)charaNum].status.skillStatus.timeToFinish;
+            }
         }
     }
 }

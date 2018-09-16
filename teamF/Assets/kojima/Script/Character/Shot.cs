@@ -14,7 +14,8 @@ public class Shot : MonoBehaviour
 
     public float shotInterval = 0.3f;
 
-    bool flag = false;
+    [HideInInspector]
+    public bool flag = false;
     float count = 0.0f;
 
     // Use this for initialization
@@ -29,7 +30,7 @@ public class Shot : MonoBehaviour
         if (flag)
         {
             count += Time.deltaTime;
-            if (count > shotInterval)
+            if (count > this.gameObject.GetComponent<Character>().status.valueStatus.bounceSpeed)
             {
                 Vector2 pos = Camera.main.ScreenToWorldPoint(releaseGesture.ScreenPosition);
                 float x = pos.x - gameObject.transform.position.x;
@@ -71,4 +72,5 @@ public class Shot : MonoBehaviour
     {
         flag = false;
     }
+    
 }

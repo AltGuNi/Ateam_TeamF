@@ -35,6 +35,7 @@ public class PlayerInfo : MonoBehaviour {
             if(chara[i])
             {
                 status.valueStatus.attack += chara[i].status.valueStatus.attack;
+                status.valueStatus.bounceSpeed += chara[i].status.valueStatus.bounceSpeed;
             }
         }
         player.status.valueStatus = status.valueStatus;
