@@ -681,6 +681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202599415}
   - component: {fileID: 202599416}
+  - component: {fileID: 202599417}
   m_Layer: 0
   m_Name: PlayerInfo
   m_TagString: Untagged
@@ -712,7 +713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a88bbb06a352bd469abbd1a6e795316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1883883885}
   userName: 
   level: 0
   currentExperience: 0
@@ -723,6 +723,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &202599417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202599414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 402ba8c322f7fe04c958cc41050bf99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1883883885}
 --- !u!1 &212915230
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e46fa87c1e02b41971163d448a6617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1883883885}
   playerInfo: {fileID: 202599416}
   charaNum: 3
   icon: {fileID: 21300000, guid: 76213d786b6e21347a8ba273f81a2d8d, type: 3}
@@ -2121,6 +2134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e46fa87c1e02b41971163d448a6617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1883883885}
   playerInfo: {fileID: 202599416}
   charaNum: 1
   icon: {fileID: 21300000, guid: 76213d786b6e21347a8ba273f81a2d8d, type: 3}
@@ -3837,11 +3851,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2eecf3caa6d22543b2baa588a978ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteType: 3
-  spriteList:
-    stand: {fileID: 21300000, guid: b245826ecc1a1064d94a6500d02796af, type: 3}
-    icon: {fileID: 0}
-    run: {fileID: 0}
 --- !u!114 &1081911916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9369,6 +9378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e46fa87c1e02b41971163d448a6617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1883883885}
   playerInfo: {fileID: 202599416}
   charaNum: 2
   icon: {fileID: 21300000, guid: 76213d786b6e21347a8ba273f81a2d8d, type: 3}
@@ -9938,6 +9948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e46fa87c1e02b41971163d448a6617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1883883885}
   playerInfo: {fileID: 202599416}
   charaNum: 0
   icon: {fileID: 21300000, guid: 76213d786b6e21347a8ba273f81a2d8d, type: 3}

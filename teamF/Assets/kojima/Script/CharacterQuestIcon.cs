@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class CharacterQuestIcon : MonoBehaviour {
 
+    public Character player;
+
     public PlayerInfo playerInfo;
 
     public PlayerInfo.CharaNum charaNum;
@@ -77,7 +79,7 @@ public class CharacterQuestIcon : MonoBehaviour {
     public void ActivateSkill()
     {
         gameObject.transform.GetChild(1).GetComponent<Image>().sprite = iconFramePlay;
-        playerInfo.player.status.valueStatus.attack += playerInfo.chara[(int)charaNum].status.skillStatus.UpATK;
+        player.status.valueStatus.attack += playerInfo.chara[(int)charaNum].status.skillStatus.UpATK;
     }
 
     // スキルの発動中
@@ -89,7 +91,7 @@ public class CharacterQuestIcon : MonoBehaviour {
     public void FinishSkill()
     {
         gameObject.transform.GetChild(1).GetComponent<Image>().sprite = iconFrame;
-        playerInfo.player.status.valueStatus.attack -= playerInfo.chara[(int)charaNum].status.skillStatus.UpATK;
+        player.status.valueStatus.attack -= playerInfo.chara[(int)charaNum].status.skillStatus.UpATK;
     }
 
 
