@@ -42,11 +42,11 @@ public class BackGround : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, -speed);
     }
 	
 	// Update is called once per frame
 	void Update () {
+        gameObject.transform.Translate(new Vector2(0.0f, -speed));
         // 画面外に出る場合、新しく作る
         if (!instanceFlag &&
             gameObject.transform.position.y < instanceLine)

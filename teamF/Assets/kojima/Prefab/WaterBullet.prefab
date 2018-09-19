@@ -101,13 +101,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colideType: 0
   status:
-    bulletAttribute: 0
-    attribute: 2
+    bulletElement: 0
+    SpecialtyElement: 0
     attackType: 0
-    HP: 0
-    attack: 0
-    defence: 0
-    bounceSpeed: 0
+    valueStatus:
+      HP: 0
+      attack: 0
+      defence: 0
+      bounceSpeed: 0
+      duration: 0
+    skillStatus:
+      timeToActivate: 0
+      timeToFinish: 0
+      UpATK: 0
 --- !u!212 &212563185149801746
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -141,7 +147,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: bb3068fc83bfc524c98ea99c97b14446, type: 3}
   m_Color: {r: 0.35294116, g: 0.8661256, b: 1, a: 1}
   m_FlipX: 0

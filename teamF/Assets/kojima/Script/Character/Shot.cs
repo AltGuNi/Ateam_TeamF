@@ -13,7 +13,7 @@ public class Shot : MonoBehaviour
     public bool flag = false;
     float count = 0.0f;
     [HideInInspector]
-    public Vector2 dir = Vector2.zero;
+    public float radian = 0.0f;
     
     // Use this for initialization
     void Start () {
@@ -30,7 +30,7 @@ public class Shot : MonoBehaviour
             count += Time.deltaTime;
             if (count > baseObject.status.valueStatus.duration)
             {
-                bulletGenerator.Instance(this.gameObject.GetComponent<Character>(), new Vector2(dir.x, dir.y));
+                bulletGenerator.Instance(this.gameObject.GetComponent<Character>(), radian);
                 count = 0.0f;
             }
         }

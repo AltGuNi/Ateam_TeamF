@@ -6,7 +6,7 @@ Assets/test.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.UI.TextureSwitch
 70d9a5dfdd92296522528a98d2f5ed68 Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.PenCursor
-5824f9eae2d31f748cac872f197726ba Assembly-CSharp.dll:.Character
+bcc3aa8358950ef1b93dbb190147e501 Assembly-CSharp.dll:.Character
 0189d52198025e02a31dab4f2f816848 Assembly-CSharp.dll:TouchScript.Gestures.TransformGestures.TransformGesture
 14a65f7b8326a60ff309254e19582b7b Assembly-CSharp.dll:TouchScript.Examples.Tap.Kick
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -21,10 +21,10 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-f1e84726304024e84c354daf8f5a6fe3 Assembly-CSharp.dll:.PlayerInfo
+102fdf84a7558de57bb379e788c51b42 Assembly-CSharp.dll:.PlayerInfo
 4db4eddbab184d463c1433e1bb2af81f Assembly-CSharp.dll:TouchScript.Examples.UI.SetColor
 08712033bfb8d4fd2842041f9a20ded7 Assembly-CSharp.dll:TouchScript.Examples.RawInput.Spawner
-5824f9eae2d31f748cac872f197726ba Assembly-CSharp.dll:.Bullet
+bcc3aa8358950ef1b93dbb190147e501 Assembly-CSharp.dll:.Bullet
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Core.LayerManagerInstance
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -126,12 +126,13 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 97a09ec39aea018ce7d9277bd2f43161 Assembly-CSharp.dll:TouchScript.Layers.StandardLayer
-5824f9eae2d31f748cac872f197726ba Assembly-CSharp.dll:.BeseObject
+df56c8ad8b8273b7c33013f3728ccc9c Assembly-CSharp.dll:.SendStatusFromPlayerInfo
+bcc3aa8358950ef1b93dbb190147e501 Assembly-CSharp.dll:.BeseObject
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 d01076a6a1818355740b0f2f03649d29 Assembly-CSharp.dll:TouchScript.Examples.Photos.Container
 daa565a4bc00993781a7c9f74a405633 Assembly-CSharp.dll:TouchScript.Gestures.FlickGesture
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Core.TouchManagerInstance
-313d61c06bf8f47a8a712e430c6106c2 Assembly-CSharp.dll:.BulletGenerator
+57f8e8e2df40b516563f6945703fc7bd Assembly-CSharp.dll:.BulletGenerator
 cdcc95266fae47eb9736a554975c94e4 Assembly-CSharp.dll:.ExamplesList
 ffcb82fccd9242220f3d88cf27f8bfe3 Assembly-CSharp.dll:TouchScript.Gestures.TransformGestures.Clustered.ClusteredPinnedTransformGesture
 47aa7529825d58580b94dabd237f34b7 Assembly-CSharp.dll:TouchScript.Examples.Portal.Planet
@@ -150,12 +151,12 @@ a2398cab0afec05bd8b6b70c007a516c Assembly-CSharp.dll:TouchScript.Behaviors.Curso
 2725ca7aa383d4542b0fbf7d8aff56c1 Assembly-CSharp.dll:NCMB.NCMBSettings
 6f9bd79aedc29786beb34a0e2f72a762 Assembly-CSharp.dll:.ElementsBackGround
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.GestureManager
-cb122d0c01b13dfe8c889e60a968b614 Assembly-CSharp.dll:.Shot
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OperationManager
+87d84637249e3733a213f21d4b807aab Assembly-CSharp.dll:.Player
+2ceed26e978d00bd263e8259d87220ed Assembly-CSharp.dll:.Shot
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Core.DebuggableMonoBehaviour
 42bbd8dadc66de980ed7ab69a5fd1258 Assembly-CSharp.dll:TouchScript.Gestures.PressGesture
 0fd6aafde779927819d0d509e0bdfec9 Assembly-CSharp.dll:TouchScript.Gestures.MetaGesture
-4104a6dceba55e11872a1e87305bb451 Assembly-CSharp.dll:.CharacterQuestIcon
+8413d5f9710faed16ae6b76e03598130 Assembly-CSharp.dll:.CharacterQuestIcon
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.PointerCursor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Examples.Portal.Vortex
 c1fa312bc75f65840a2d531ca0166207 Assembly-CSharp.dll:TouchScript.Examples.Tap.Spawn
@@ -200,7 +201,6 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 5eeacec8e729f2f59963b7cac59021a8 Assembly-CSharp.dll:TouchScript.Layers.FullscreenLayer
-9bbbd4dd44792c040b216c9121860032 Assembly-CSharp.dll:.SpriteType
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 9dc41ecfefe71e0d0e207b5650949483 Assembly-CSharp.dll:TouchScript.Devices.Display.GenericDisplayDevice
 257e7db485b6dd0c687101247ab95a1b Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.TouchCursor
@@ -218,8 +218,10 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 2427cde986b9c1964687738f93a0f5bf Assembly-CSharp.dll:TouchScript.Gestures.TapGesture
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShowMe
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.test
-e95746ad214e5d184d358c4e02710e23 Assembly-CSharp.dll:.Enemy
+6f5b5fd4b158ef9c1036726ab6b3db97 Assembly-CSharp.dll:.Enemy
 354799ab7253e8d83914c27d4dc65f56 Assembly-CSharp.dll:TouchScript.Examples.Portal.Spawner
 51e5d56aba2dca4d530c455fa754f3d2 Assembly-CSharp.dll:.BackGround
 ffcb82fccd9242220f3d88cf27f8bfe3 Assembly-CSharp.dll:TouchScript.Gestures.TransformGestures.PinnedTransformGesture
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.LayerManager
+f9c94a4e5c460b3173e110845c31df80 Assembly-CSharp.dll:.ParticleTest
+89b861bb02dc13c0916d9ef60237719a Assembly-CSharp.dll:.TapEffect

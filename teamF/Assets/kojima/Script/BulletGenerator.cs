@@ -25,7 +25,7 @@ public class BulletGenerator : MonoBehaviour {
 		
 	}
     
-    public void Instance(BeseObject obj, Vector2 dir)
+    public void Instance(BeseObject obj, float radian)
     {
         GameObject instance;
 
@@ -54,7 +54,9 @@ public class BulletGenerator : MonoBehaviour {
 
         // 速度
         float speed = obj.status.valueStatus.bounceSpeed;
-        instance.GetComponent<Bullet>().Velocity = new Vector2(dir.x * speed, dir.y * speed);
+        float dirX = Mathf.Cos(radian);
+        float dirY = Mathf.Sin(radian);
+        instance.GetComponent<Bullet>().Velocity = new Vector2(dirX * speed, dirY * speed);
 
         // 当たり判定の種類を設定
         instance.GetComponent<Bullet>().colideType = obj.GetComponent<BeseObject>().colideType;
@@ -64,5 +66,9 @@ public class BulletGenerator : MonoBehaviour {
 
         // 親の設定
         instance.transform.SetParent(GameObject.Find("LongPressArea").transform);
+
+        // 角度
+        instance.gameObject.transform.Rotate(new Vector3(0.0f, 0.0f, radian * Mathf.Rad2Deg - 90.0f));
+
     }
 }

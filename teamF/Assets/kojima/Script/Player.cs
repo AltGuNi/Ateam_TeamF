@@ -25,10 +25,7 @@ public class Player : MonoBehaviour {
             float y = pos.y - gameObject.transform.position.y;
 
             //// 方向
-            float angle = Mathf.Atan2(y, x);
-            float dirX = Mathf.Cos(angle);
-            float dirY = Mathf.Sin(angle);
-            shot.dir = new Vector2(dirX, dirY);
+            shot.radian = Mathf.Atan2(y, x);
         }
     }
     private void OnEnable()
