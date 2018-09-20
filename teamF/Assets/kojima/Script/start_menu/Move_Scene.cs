@@ -8,19 +8,36 @@ using UnityEngine.SceneManagement;
 public class Move_Scene : MonoBehaviour {
 
 	public string move_scene = "main_menu";
+    public TapGesture tapGesture;
+
+    // private void OnEnable()
+    // {
+    //     GetComponent<PressGesture>().Pressed += OnPressed;
+    // }
+
+    // private void OnDisable()
+    // {
+    //     GetComponent<PressGesture>().Pressed -= OnPressed;
+    // }
+
+    // private void OnPressed(object sender, EventArgs e)
+    // {
+    //     SceneManager.LoadScene(move_scene);
+    // }
 
     private void OnEnable()
     {
-        GetComponent<PressGesture>().Pressed += OnPressed;
+        tapGesture.Tapped += OnTapped;
     }
 
     private void OnDisable()
     {
-        GetComponent<PressGesture>().Pressed -= OnPressed;
+        tapGesture.Tapped -= OnTapped;
     }
 
-    private void OnPressed(object sender, EventArgs e)
+    private void OnTapped( object sender, EventArgs e )
     {
         SceneManager.LoadScene(move_scene);
     }
+
 }

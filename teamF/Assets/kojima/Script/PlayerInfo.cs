@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerInfo : MonoBehaviour {
 
-    public Character player;
-
     [SerializeField, Space(10)]
     public string userName;                // ユーザーネーム
 
@@ -25,19 +23,10 @@ public class PlayerInfo : MonoBehaviour {
     }
 
     public Character[] chara = new Character[(int)CharaNum.Max];
-
-    BeseObject.Status status = new BeseObject.Status();
-
+    
     // Use this for initialization
     void Start () {
-        for (int i = 0; i < (int)CharaNum.Max; i++)
-        {
-            if(chara[i])
-            {
-                status.valueState.attack += chara[i].status.valueState.attack;
-            }
-        }
-        player.status.valueState = status.valueState;
+        
 	}
 	
 	// Update is called once per frame

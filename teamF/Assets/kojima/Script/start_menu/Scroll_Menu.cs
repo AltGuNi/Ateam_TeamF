@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using TouchScript.Gestures;
  
 //angleのスピードで、とあるオブジェクトの周りを回転するスクリプト
 public class Scroll_Menu : MonoBehaviour {
@@ -23,7 +24,36 @@ public class Scroll_Menu : MonoBehaviour {
 		this.transform.position = new Vector3(-2.0f, -2.0f, 0.0f);
 		startPosition = new Vector3(-2.0f, -2.0f, 0.0f);
 	}
-	
+
+	public FlickGesture flickGesture;
+
+    private void OnEnable()
+    {
+        flickGesture.Flicked += OnFlicked;
+    }
+
+    private void OnDisable()
+    {
+        flickGesture.Flicked -= OnFlicked;
+    }
+
+    private void OnFlicked( object sender, System.EventArgs e )
+    {
+        Debug.Log( "フリックされた: " + flickGesture.ScreenFlickVector );
+		if(flickGesture.ScreenFlickVector.y < 0){
+			i++;
+			if(i >= 4) i = 0;
+		}else{
+			i--;
+			if(i < 0) i = 3;
+		}
+
+		this.transform.position = new Vector3(this.transform.position.x, transform.position.y, menu_pos[i].z);
+
+		startTime = Time.timeSinceLevelLoad;
+		startPosition = this.transform.position;
+    }
+
 	void Update () {
 
 		if(i == 2){
@@ -41,14 +71,15 @@ public class Scroll_Menu : MonoBehaviour {
 		
 		transform.position = Vector3.Lerp (startPosition, menu_pos[i], rate);
 
-		if(Input.GetKeyDown("up")){
-			i++;
-			if(i >= 4) i = 0;
 
-			this.transform.position = new Vector3(this.transform.position.x, transform.position.y, menu_pos[i].z);
+		// if(Input.GetKeyDown("up")){
+		// 	i++;
+		// 	if(i >= 4) i = 0;
 
-			startTime = Time.timeSinceLevelLoad;
-			startPosition = this.transform.position;
-		}
+		// 	this.transform.position = new Vector3(this.transform.position.x, transform.position.y, menu_pos[i].z);
+
+		// 	startTime = Time.timeSinceLevelLoad;
+		// 	startPosition = this.transform.position;
+		// }
 	}
 }

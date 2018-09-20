@@ -33,7 +33,7 @@ public class Enemy : BeseObject{
 
     void LateUpdate() {
 
-        if (status.valueState.HP <= 0.0f)
+        if (status.valueStatus.HP <= 0.0f)
         {
             Destroy(this.gameObject);
         }

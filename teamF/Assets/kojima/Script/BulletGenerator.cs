@@ -15,9 +15,6 @@ public class BulletGenerator : MonoBehaviour {
     [SerializeField]
     GameObject woodbulletPrefab;
 
-    [SerializeField, Space(10)]
-    Vector2 speed = new Vector2(1.0f, 1.0f);
-
     // Use this for initialization
     void Start () {
 		
@@ -56,12 +53,16 @@ public class BulletGenerator : MonoBehaviour {
         instance.gameObject.transform.position = obj.gameObject.transform.position;
 
         // 速度
-        instance.GetComponent<Bullet>().Velocity = new Vector2(dir.x * speed.x, dir.y * speed.y);
+        float speed = obj.status.valueStatus.bounceSpeed;
+        instance.GetComponent<Bullet>().Velocity = new Vector2(dir.x * speed, dir.y * speed);
 
         // 当たり判定の種類を設定
         instance.GetComponent<Bullet>().colideType = obj.GetComponent<BeseObject>().colideType;
 
         // ステータスの反映
-        instance.GetComponent<Bullet>().status.valueState = obj.GetComponent<BeseObject>().status.valueState;
+        instance.GetComponent<Bullet>().status.valueStatus = obj.GetComponent<BeseObject>().status.valueStatus;
+
+        // 親の設定
+        instance.transform.SetParent(GameObject.Find("LongPressArea").transform);
     }
 }

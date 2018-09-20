@@ -4,7 +4,6 @@ using UnityEngine;
 using System;
 using TouchScript.Gestures;
 
-[RequireComponent(typeof(SpriteType))]
 public class Character : BeseObject
 {
     // Use this for initialization
