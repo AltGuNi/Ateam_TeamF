@@ -31,14 +31,15 @@ public class BackGround : MonoBehaviour {
 
     public ElementsInfo[] elementsSprite = {
         new ElementsInfo(BeseObject.Elements.Fire),
-        new ElementsInfo(BeseObject.Elements.Water),
-        new ElementsInfo(BeseObject.Elements.Wood)};
+        new ElementsInfo(BeseObject.Elements.Wood),
+        new ElementsInfo(BeseObject.Elements.Water)};
 
     float startLine = 47.1f;
     float instanceLine = -37.2f;
     float endLine = -47.1f;
 
-    bool instanceFlag = false;
+    [HideInInspector]
+    public bool instanceFlag = false;
 
     // Use this for initialization
     void Start () {
@@ -47,19 +48,13 @@ public class BackGround : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         gameObject.transform.Translate(new Vector2(0.0f, -speed));
-        // 画面外に出る場合、新しく作る
-        if (!instanceFlag &&
-            gameObject.transform.position.y < instanceLine)
+        // スクロールが終わった場合、移動
+        instanceFlag = false;
+
+        if (gameObject.transform.position.y < endLine)
         {
             instanceFlag = true;
-            GameObject obj = Instantiate(this.gameObject);
-            obj.gameObject.transform.position = new Vector2(0.0f, startLine);
-            obj.transform.SetParent(GameObject.Find("LongPressArea").transform);
-        }
-        // スクロールが終わった場合、消す
-		if(gameObject.transform.position.y < endLine)
-        {
-            Destroy(this.gameObject);
+            transform.position = new Vector2(0.0f, 121.0f);
         }
 	}
 }

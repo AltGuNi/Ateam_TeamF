@@ -65,7 +65,7 @@ public class BulletGenerator : MonoBehaviour {
         instance.GetComponent<Bullet>().status.valueStatus = obj.GetComponent<BeseObject>().status.valueStatus;
 
         // 親の設定
-        instance.transform.SetParent(GameObject.Find("LongPressArea").transform);
+        instance.transform.SetParent(GameObject.Find("TouchArea").transform);
 
         // 角度
         instance.gameObject.transform.Rotate(new Vector3(0.0f, 0.0f, radian * Mathf.Rad2Deg - 90.0f));

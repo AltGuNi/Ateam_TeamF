@@ -17,6 +17,26 @@ public class ElementsBackGround : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        RnadomElement();
+
+        if (isLeft)
+        {
+            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (gameObject.transform.parent.GetComponent<BackGround>().instanceFlag)
+        {
+            
+            //RnadomElement();
+        }
+    }
+
+    public void RnadomElement()
+    {
         int totalRate = 0;
         int random = UnityEngine.Random.Range(0, 101);
 
@@ -41,16 +61,6 @@ public class ElementsBackGround : MonoBehaviour {
                 elements = elementInfo.elements;
             }
         }
-
-        if (isLeft)
-        {
-            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     private void OnEnable()

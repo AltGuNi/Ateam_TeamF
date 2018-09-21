@@ -16,8 +16,8 @@ public class BeseObject : MonoBehaviour {
     {
         Nomal,
         Fire,
-        Water,
         Wood,
+        Water,
 
         Max
     };
@@ -64,9 +64,38 @@ public class BeseObject : MonoBehaviour {
     public CollideType colideType = CollideType.None;
     public Status status;
 
-    public void BeDamaged(float value)
+    public void BeDamaged(float value, Elements elements)
     {
-        status.valueStatus.HP -= value;
+        // 弱点属性
+        int bufElement = (int)status.bulletElement - 1;
+        if (bufElement <= 0)
+        {
+            bufElement = (int)Elements.Max - 1;
+        }
+        if ((int)elements == bufElement)
+        {
+            status.valueStatus.HP -= (value * 1.5f);
+        }
+        else
+        {
+            // 無効属性
+            bufElement = (int)status.bulletElement + 1;
+            if (bufElement >= (int)Elements.Max - 1)
+            {
+                bufElement = 1;
+            }
+            if ((int)elements == bufElement)
+            {
+
+            }
+            // それ以外
+            else
+            {
+                status.valueStatus.HP -= value;
+            }
+        }
+
+        // HPを0以下にしない
         if (status.valueStatus.HP <= 0.0f)
         {
             status.valueStatus.HP = 0.0f;

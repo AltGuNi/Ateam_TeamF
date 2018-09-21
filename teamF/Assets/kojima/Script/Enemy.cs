@@ -13,7 +13,7 @@ public class Enemy : BeseObject{
 
     // Use this for initialization
     void Start () {
-        bulletGenerator = GameObject.Find("BulletGenerator").GetComponent<BulletGenerator>();
+        bulletGenerator = GameObject.Find("EnemyBulletGenerator").GetComponent<BulletGenerator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 	
@@ -26,7 +26,7 @@ public class Enemy : BeseObject{
             if (shotElapsedTime >= shotInterval)
             {
                 shotElapsedTime = 0.0f;
-                bulletGenerator.Instance(this, -90.0f);
+                bulletGenerator.Instance(this, Mathf.Deg2Rad * -90);
             }
         }
     }

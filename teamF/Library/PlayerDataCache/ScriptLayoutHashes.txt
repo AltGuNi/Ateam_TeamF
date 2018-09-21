@@ -215,6 +215,8 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 6ec273a5fcd8b0a1a1b85b7bebb4a14a Assembly-CSharp.dll:TouchScript.Layers.UI.TouchScriptInputModule
 25cb51b79761cf69e146997ca3f33ce1 Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.MouseCursor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Behaviors.UI.OverHelper
+f9c94a4e5c460b3173e110845c31df80 Assembly-CSharp.dll:.ParticleTest
+89b861bb02dc13c0916d9ef60237719a Assembly-CSharp.dll:.TapEffect
 2427cde986b9c1964687738f93a0f5bf Assembly-CSharp.dll:TouchScript.Gestures.TapGesture
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShowMe
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.test
@@ -223,5 +225,3 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 51e5d56aba2dca4d530c455fa754f3d2 Assembly-CSharp.dll:.BackGround
 ffcb82fccd9242220f3d88cf27f8bfe3 Assembly-CSharp.dll:TouchScript.Gestures.TransformGestures.PinnedTransformGesture
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.LayerManager
-f9c94a4e5c460b3173e110845c31df80 Assembly-CSharp.dll:.ParticleTest
-89b861bb02dc13c0916d9ef60237719a Assembly-CSharp.dll:.TapEffect
