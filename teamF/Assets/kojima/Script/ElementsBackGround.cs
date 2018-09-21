@@ -30,8 +30,7 @@ public class ElementsBackGround : MonoBehaviour {
     {
         if (gameObject.transform.parent.GetComponent<BackGround>().instanceFlag)
         {
-            
-            //RnadomElement();
+            RnadomElement();
         }
     }
 

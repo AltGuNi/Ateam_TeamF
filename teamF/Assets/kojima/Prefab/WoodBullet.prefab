@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colideType: 0
   status:
-    bulletElement: 3
+    bulletElement: 2
     SpecialtyElement: 0
     attackType: 0
     valueStatus:

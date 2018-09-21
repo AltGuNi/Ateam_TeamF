@@ -66,24 +66,26 @@ public class BeseObject : MonoBehaviour {
 
     public void BeDamaged(float value, Elements elements)
     {
-        // 弱点属性
+        // 弱点属性を求める
         int bufElement = (int)status.bulletElement - 1;
         if (bufElement <= 0)
         {
             bufElement = (int)Elements.Max - 1;
         }
+        // 弱点属性の処理
         if ((int)elements == bufElement)
         {
             status.valueStatus.HP -= (value * 1.5f);
         }
         else
         {
-            // 無効属性
+            // 無効属性を求める
             bufElement = (int)status.bulletElement + 1;
             if (bufElement >= (int)Elements.Max - 1)
             {
                 bufElement = 1;
             }
+            // 無効属性の処理
             if ((int)elements == bufElement)
             {
 

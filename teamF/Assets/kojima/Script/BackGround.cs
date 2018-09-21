@@ -47,7 +47,6 @@ public class BackGround : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        gameObject.transform.Translate(new Vector2(0.0f, -speed));
         // スクロールが終わった場合、移動
         instanceFlag = false;
 
@@ -57,4 +56,9 @@ public class BackGround : MonoBehaviour {
             transform.position = new Vector2(0.0f, 121.0f);
         }
 	}
+
+    void FixedUpdate()
+    {
+        gameObject.transform.Translate(new Vector2(0.0f, -speed));
+    }
 }

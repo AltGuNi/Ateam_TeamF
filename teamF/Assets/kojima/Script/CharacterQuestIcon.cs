@@ -39,7 +39,6 @@ public class CharacterQuestIcon : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
         if (playerInfo.chara[(int)charaNum])
         {
             if (!isSkill)
@@ -73,7 +72,6 @@ public class CharacterQuestIcon : MonoBehaviour {
             baseImage.fillAmount = 1.0f - floorTime / floorTime2;
         }
     }
-
 
     // スキルの発動時
     public void ActivateSkill()
