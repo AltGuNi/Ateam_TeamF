@@ -33,8 +33,8 @@ public class Player : MonoBehaviour {
         // 倒されたとき時間を止め進める
         if (character.status.valueStatus.HP <= 0.0f)
         {
-            gameTime.IsResult(false);
-            this.gameObject.SetActive(false);
+            //gameTime.IsResult(false);
+            //this.gameObject.SetActive(false);
         }
     }
     private void OnEnable()

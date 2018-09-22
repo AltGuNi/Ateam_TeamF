@@ -6,9 +6,11 @@ public class Wave : MonoBehaviour {
 
     public GameObject nextWave;
     public bool isBoss = false;
+    public GameObject fontWave;
 	// Use this for initialization
-	void Start () {
-        
+	void Start ()
+    {
+        fontWave.GetComponent<FontWava>().NextWave(isBoss);
     }
 	
 	// Update is called once per frame

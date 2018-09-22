@@ -92,6 +92,7 @@ public class Winpop : MonoBehaviour {
                 break;
         }
 
+        // ホーム画面に遷移
         if (type >= 2)
         {
 

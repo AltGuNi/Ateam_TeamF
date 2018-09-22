@@ -40,7 +40,7 @@ public class FontGameClear : MonoBehaviour {
         tapGesture.Tapped -= OnTapped;
     }
 
-    // 長押し最初の処理
+    // タップの処理
     private void OnTapped(object sender, EventArgs e)
     {
         if (alpha >= 1.0f)
