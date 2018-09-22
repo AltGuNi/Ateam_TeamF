@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
 
     public LongPressGesture longPressGesture;
     public ReleaseGesture releaseGesture;
+    public GameTime gameTime;
     Shot shot;
 
     Character character;
@@ -32,7 +33,8 @@ public class Player : MonoBehaviour {
         // 倒されたとき時間を止め進める
         if (character.status.valueStatus.HP <= 0.0f)
         {
-
+            gameTime.IsResult(false);
+            this.gameObject.SetActive(false);
         }
     }
     private void OnEnable()

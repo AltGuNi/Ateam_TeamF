@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameTime : MonoBehaviour {
-
-    public GameObject blur;
-    public GameObject winPop;
-    public GameObject losePop;
+    
+    public GameObject win;
+    public GameObject lose;
     public float slowSpeed;
     public int resultTime;
 
@@ -57,13 +56,11 @@ public class GameTime : MonoBehaviour {
                 {
                     if (isWin)
                     {
-                        winPop.SetActive(true);
-                        blur.GetComponent<Blur>().isBlur();
+                        win.SetActive(true);
                     }
                     else
                     {
-                        losePop.SetActive(true);
-                        blur.GetComponent<Blur>().isBlur();
+                        lose.SetActive(true);
                     }
                     isResult = false;
                 }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class QuestInfo : MonoBehaviour {
 
+    public int experience;      // クエスト中に手に入れた経験値
+    public int gold;            // クエスト中に手に入れたお金
+
 	// Use this for initialization
 	void Start () {
 		

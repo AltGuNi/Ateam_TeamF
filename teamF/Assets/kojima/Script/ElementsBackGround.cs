@@ -74,6 +74,10 @@ public class ElementsBackGround : MonoBehaviour {
 
     private void OnPressed(object sender, EventArgs e)
     {
-        GameObject.Find("Player").GetComponent<Character>().status.bulletElement = elements;
+        GameObject player = GameObject.Find("Player");
+        if (player)
+        {
+            player.GetComponent<Character>().status.bulletElement = elements;
+        }
     }
 }
