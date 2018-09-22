@@ -10,10 +10,12 @@ public class Player : MonoBehaviour {
     public ReleaseGesture releaseGesture;
     Shot shot;
 
+    Character character;
     // Use this for initialization
     void Start () {
 
         shot = GetComponent<Shot>();
+        character = GetComponent<Character>();
     }
 	
 	// Update is called once per frame
@@ -26,6 +28,11 @@ public class Player : MonoBehaviour {
 
             //// 方向
             shot.radian = Mathf.Atan2(y, x);
+        }
+        // 倒されたとき時間を止め進める
+        if (character.status.valueStatus.HP <= 0.0f)
+        {
+
         }
     }
     private void OnEnable()

@@ -19,10 +19,12 @@ public class Blur : MonoBehaviour {
         if (flag)
         {
             image.color = new Color(image.color.r, image.color.g, image.color.b, 116.0f / 255.0f);
+            image.raycastTarget = true;
         }
         else
         {
             image.color = new Color(image.color.r, image.color.g, image.color.b, 0);
+            image.raycastTarget = false;
         }
 	}
 

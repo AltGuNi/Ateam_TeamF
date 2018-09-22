@@ -18,6 +18,7 @@ public class SendStatusFromPlayerInfo : MonoBehaviour {
         {
             if (playerInfo.chara[i])
             {
+                status.valueStatus.HP += playerInfo.chara[i].status.valueStatus.HP;
                 status.valueStatus.attack += playerInfo.chara[i].status.valueStatus.attack;
                 status.valueStatus.bounceSpeed += playerInfo.chara[i].status.valueStatus.bounceSpeed;
                 status.valueStatus.duration += playerInfo.chara[i].status.valueStatus.duration;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Wave : MonoBehaviour {
 
     public GameObject nextWave;
+    public bool isBoss = false;
 	// Use this for initialization
 	void Start () {
         
@@ -25,6 +26,11 @@ public class Wave : MonoBehaviour {
             {
                 GameObject instance = Instantiate(nextWave);
                 instance.transform.SetParent(GameObject.Find("TouchArea").transform);
+            }
+            // ボスウェーブの場合
+            if (isBoss)
+            {
+                GameObject.Find("GameTime").GetComponent<GameTime>().IsResult(true);
             }
             Destroy(this.gameObject);
         }
