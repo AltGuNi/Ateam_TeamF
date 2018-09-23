@@ -7,6 +7,7 @@ SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.UI.TextureSwitch
 70d9a5dfdd92296522528a98d2f5ed68 Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.PenCursor
 bcc3aa8358950ef1b93dbb190147e501 Assembly-CSharp.dll:.Character
+cbe483e670d8d2c7754c949a49b13faf Assembly-CSharp.dll:.SkillEffectManager
 0189d52198025e02a31dab4f2f816848 Assembly-CSharp.dll:TouchScript.Gestures.TransformGestures.TransformGesture
 14a65f7b8326a60ff309254e19582b7b Assembly-CSharp.dll:TouchScript.Examples.Tap.Kick
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -26,6 +27,7 @@ df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.T
 08712033bfb8d4fd2842041f9a20ded7 Assembly-CSharp.dll:TouchScript.Examples.RawInput.Spawner
 625d810c48212374606442193d41b183 Assembly-CSharp.dll:.Bullet
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Core.LayerManagerInstance
+b9090d6079549b9b9d8d6dc42ad94886 Assembly-CSharp.dll:.ExplosionEffectManager
 793005c590ca5bcfb4ce0d00be1f8b2f Assembly-CSharp.dll:.QuestInfo
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -59,6 +61,8 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
+05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 bd927de58391934c4b4af8c21c273716 Assembly-CSharp.dll:TouchScript.Examples.Cube.LayerDelegate
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -160,6 +164,7 @@ a2398cab0afec05bd8b6b70c007a516c Assembly-CSharp.dll:TouchScript.Behaviors.Curso
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.GestureManager
 e438b3cb095c306c66297857f4598cb8 Assembly-CSharp.dll:.Player
 f8a803f248c153756ac60c1b22c25194 Assembly-CSharp.dll:.Shot
+6e8fbceb6cada4ae38636b83673e20c3 Assembly-CSharp.dll:.Pop
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Core.DebuggableMonoBehaviour
 42bbd8dadc66de980ed7ab69a5fd1258 Assembly-CSharp.dll:TouchScript.Gestures.PressGesture
 0fd6aafde779927819d0d509e0bdfec9 Assembly-CSharp.dll:TouchScript.Gestures.MetaGesture
@@ -202,7 +207,7 @@ e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Examples.Checker
-1b07f9e296d53a5dac96429c43b0658a Assembly-CSharp.dll:.GameTime
+6948dfe8c606f160dd7c9188da7987e6 Assembly-CSharp.dll:.GameTime
 9e0ef5bf862444b5dc48b5a99554ce7c UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
@@ -213,6 +218,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+e1c2e3f6177634dce0ce57abaa454e46 Assembly-CSharp.dll:.UI_Shot
 5eeacec8e729f2f59963b7cac59021a8 Assembly-CSharp.dll:TouchScript.Layers.FullscreenLayer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 9dc41ecfefe71e0d0e207b5650949483 Assembly-CSharp.dll:TouchScript.Devices.Display.GenericDisplayDevice
@@ -226,6 +232,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 4f52fb13c8876d1fc6a0a4110faf10fc Assembly-CSharp.dll:TouchScript.Gestures.TransformGestures.ScreenTransformGesture
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.Core.GestureManagerInstance
 0d3eeb8a7145d882ce99dd14f038cee4 Assembly-CSharp.dll:.Winpop
+40f90fe811032b69bcbab5ddfeeb8184 Assembly-CSharp.dll:.HitEffectManager
 6ec273a5fcd8b0a1a1b85b7bebb4a14a Assembly-CSharp.dll:TouchScript.Layers.UI.TouchScriptInputModule
 8ed89917b3461e06d449ac1a1310255b Assembly-CSharp.dll:.FontGameOver
 25cb51b79761cf69e146997ca3f33ce1 Assembly-CSharp.dll:TouchScript.Behaviors.Cursors.MouseCursor
@@ -238,5 +245,3 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 92c10ea6b9c81569da6a3b5960d8b26c Assembly-CSharp.dll:.BackGround
 ffcb82fccd9242220f3d88cf27f8bfe3 Assembly-CSharp.dll:TouchScript.Gestures.TransformGestures.PinnedTransformGesture
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TouchScript.LayerManager
-6e8fbceb6cada4ae38636b83673e20c3 Assembly-CSharp.dll:.Pop
-e1c2e3f6177634dce0ce57abaa454e46 Assembly-CSharp.dll:.UI_Shot

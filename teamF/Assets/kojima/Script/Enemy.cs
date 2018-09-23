@@ -48,6 +48,7 @@ public class Enemy : BeseObject{
                 icon.AdvanceSkillTime(status.SpecialtyElement);
                 questInfo.experience += experence;
                 questInfo.gold += gold;
+                GameObject.Find("ExplosionEffectManager").GetComponent<ExplosionEffectManager>().ExploisonEffectPlay(transform.position);
                 Destroy(this.gameObject);
             }
         }

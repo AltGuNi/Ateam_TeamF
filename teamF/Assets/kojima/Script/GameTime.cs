@@ -7,6 +7,7 @@ public class GameTime : MonoBehaviour {
     public GameObject win;
     public GameObject lose;
     public float slowSpeed;
+    public float resultSlowSpeed = 0.001f;
     public int resultTime;
 
     float timeScale = 1.0f;
@@ -84,7 +85,7 @@ public class GameTime : MonoBehaviour {
 
     public void IsResult(bool _isWin)
     {
-        timeScale = 0.001f;
+        timeScale = resultSlowSpeed;
         count = 0;
         isSlow = false;
         isResult = true;

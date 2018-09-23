@@ -78,6 +78,12 @@ public class CharacterQuestIcon : MonoBehaviour {
     // スキルの発動時
     public void ActivateSkill()
     {
+        GameObject.Find("SkillEffectManager").GetComponent<SkillEffectManager>().SkillEffectPlay();
+        GameObject[] bullet = GameObject.FindGameObjectsWithTag("Bullet");
+        foreach (GameObject obj in bullet)
+        {
+            obj.GetComponent<Bullet>().Destroy();
+        }
         gameObject.transform.GetChild(1).GetComponent<Image>().sprite = iconFramePlay;
         player.status.valueStatus.attack += playerInfo.chara[(int)charaNum].status.skillStatus.UpATK;
     }
