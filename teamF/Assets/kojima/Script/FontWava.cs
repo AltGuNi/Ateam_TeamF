@@ -10,11 +10,10 @@ public class FontWava : MonoBehaviour {
     Text text;
     float alpha = 1.0f;
 
-    int wave = 1;
+    int wave = 0;
     bool isBoss = false;
     // Use this for initialization
     void Start () {
-
         text = GetComponent<Text>();
         text.color = new Color(1, 1, 1, alpha);
     }

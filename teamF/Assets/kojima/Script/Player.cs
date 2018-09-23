@@ -24,6 +24,7 @@ public class Player : MonoBehaviour {
         if(shot.flag)
         {
             Vector2 pos = Camera.main.ScreenToWorldPoint(releaseGesture.ScreenPosition);
+            pos += new Vector2(0.0f, 2.0f);
             float x = pos.x - gameObject.transform.position.x;
             float y = pos.y - gameObject.transform.position.y;
 

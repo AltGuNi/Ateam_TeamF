@@ -6,10 +6,11 @@ public class Wave : MonoBehaviour {
 
     public GameObject nextWave;
     public bool isBoss = false;
-    public GameObject fontWave;
+    GameObject fontWave;
 	// Use this for initialization
 	void Start ()
     {
+        fontWave = GameObject.Find("TouchArea").transform.Find("Canvas").Find("FontWave").gameObject;
         fontWave.GetComponent<FontWava>().NextWave(isBoss);
     }
 	

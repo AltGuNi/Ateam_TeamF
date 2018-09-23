@@ -19,8 +19,10 @@ public class CharacterQuestIcon : MonoBehaviour {
     Image baseImage;                        // アイコンの背景
 
     bool isSkill = false;                   // スキル発動中の場合はtrue
-    float timeToActivate = 0.0f;            // スキル発動可能までの残り時間
-    float timeToFinish = 0.0f;              // スキル終了までの時間
+    [HideInInspector]
+    public float timeToActivate = 0.0f;            // スキル発動可能までの残り時間
+    [HideInInspector]
+    public float timeToFinish = 0.0f;              // スキル終了までの時間
 
     // Use this for initialization
     void Start()
