@@ -1,0 +1,351 @@
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:Temp/Assembly-CSharp.dll
+-unsafe
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
+-r:Assets/TouchScript/Modules/TUIO/Libraries/OSCsharp.dll
+-r:Assets/TouchScript/Modules/TUIO/Libraries/TUIOsharp.dll
+-r:C:/Users/s172074/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll
+-r:C:/Users/s172074/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll
+-r:C:/Users/s172074/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll
+-r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll"
+-r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll"
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_2017_1_OR_NEWER
+-define:UNITY_2017_2_OR_NEWER
+-define:UNITY_2017_3_OR_NEWER
+-define:UNITY_2017_4_OR_NEWER
+-define:UNITY_2017_4_6
+-define:UNITY_2017_4
+-define:UNITY_2017
+-define:UNITY_ANALYTICS
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_GENERICS
+-define:ENABLE_PVR_GI
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_GRID
+-define:ENABLE_TILEMAP
+-define:ENABLE_TERRAIN
+-define:ENABLE_DIRECTOR
+-define:ENABLE_UNET
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_HUB
+-define:ENABLE_EDITOR_HUB_LICENSE
+-define:ENABLE_WEBSOCKET_CLIENT
+-define:ENABLE_DIRECTOR_AUDIO
+-define:ENABLE_DIRECTOR_TEXTURE
+-define:ENABLE_TIMELINE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:ENABLE_NATIVE_ARRAY
+-define:ENABLE_SPRITE_MASKING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:ENABLE_MONO_BDWGC
+-define:RENDER_SOFTWARE_CURSOR
+-define:INCLUDE_PUBNUB
+-define:ENABLE_PLAYMODE_TESTS_RUNNER
+-define:ENABLE_VIDEO
+-define:ENABLE_RMGUI
+-define:ENABLE_PACKMAN
+-define:ENABLE_CUSTOM_RENDER_TEXTURE
+-define:ENABLE_STYLE_SHEETS
+-define:ENABLE_LOCALIZATION
+-define:PLATFORM_WEBGL
+-define:UNITY_WEBGL
+-define:UNITY_WEBGL_API
+-define:UNITY_DISABLE_WEB_VERIFICATION
+-define:UNITY_GFX_USE_PLATFORM_VSYNC
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_VR
+-define:ENABLE_SPATIALTRACKING
+-define:ENABLE_IL2CPP
+-define:NET_2_0_SUBSET
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-define:ENABLE_NATIVE_ARRAY_CHECKS
+-define:UNITY_TEAM_LICENSE
+Assets/kojima/Script/BackGround.cs
+Assets/kojima/Script/BeseObject.cs
+Assets/kojima/Script/Blur.cs
+Assets/kojima/Script/Bullet.cs
+Assets/kojima/Script/BulletGenerator.cs
+Assets/kojima/Script/Character/Character.cs
+Assets/kojima/Script/Character/Shot.cs
+Assets/kojima/Script/CharacterQuestIcon.cs
+Assets/kojima/Script/CharacterQuestIconManager.cs
+Assets/kojima/Script/ElementsBackGround.cs
+Assets/kojima/Script/EnemeyHpGenerator.cs
+Assets/kojima/Script/Enemy.cs
+Assets/kojima/Script/EnemyMoveType/EnemyMoveNomal.cs
+Assets/kojima/Script/FontGameClear.cs
+Assets/kojima/Script/FontGameOver.cs
+Assets/kojima/Script/FontWava.cs
+Assets/kojima/Script/GameTime.cs
+Assets/kojima/Script/LongPressEffect.cs
+Assets/kojima/Script/Player.cs
+Assets/kojima/Script/PlayerInfo.cs
+Assets/kojima/Script/Pop.cs
+Assets/kojima/Script/QuestInfo.cs
+Assets/kojima/Script/SendStatusFromPlayerInfo.cs
+Assets/kojima/Script/Stop.cs
+Assets/kojima/Script/StopButton.cs
+Assets/kojima/Script/TapEffect.cs
+Assets/kojima/Script/test.cs
+Assets/kojima/Script/UI_HP.cs
+Assets/kojima/Script/UIBase.cs
+Assets/kojima/Script/Wave.cs
+Assets/kojima/Script/Winpop.cs
+Assets/NCMB/NCMBManager.cs
+Assets/NCMB/NCMBSettings.cs
+Assets/NCMB/Script/CommonConstant.cs
+Assets/NCMB/Script/ExtensionsClass.cs
+Assets/NCMB/Script/MimeTypeMap.cs
+Assets/NCMB/Script/MiniJSON.cs
+Assets/NCMB/Script/NamespaceDoc.cs
+Assets/NCMB/Script/NCMBACL.cs
+Assets/NCMB/Script/NCMBAddOperation.cs
+Assets/NCMB/Script/NCMBAddUniqueOperation.cs
+Assets/NCMB/Script/NCMBAnalytics.cs
+Assets/NCMB/Script/NCMBCallback.cs
+Assets/NCMB/Script/NCMBClassNameAttribute.cs
+Assets/NCMB/Script/NCMBConnection.cs
+Assets/NCMB/Script/NCMBDebug.cs
+Assets/NCMB/Script/NCMBDeleteOperation.cs
+Assets/NCMB/Script/NCMBException.cs
+Assets/NCMB/Script/NCMBFacebookParameters.cs
+Assets/NCMB/Script/NCMBFieldOperation.cs
+Assets/NCMB/Script/NCMBFile.cs
+Assets/NCMB/Script/NCMBGeoPoint.cs
+Assets/NCMB/Script/NCMBIncrementOperation.cs
+Assets/NCMB/Script/NCMBInstallation.cs
+Assets/NCMB/Script/NCMBObject.cs
+Assets/NCMB/Script/NCMBPush.cs
+Assets/NCMB/Script/NCMBQuery.cs
+Assets/NCMB/Script/NCMBRelation.cs
+Assets/NCMB/Script/NCMBRelationOperation.cs
+Assets/NCMB/Script/NCMBRemoveOperation.cs
+Assets/NCMB/Script/NCMBRole.cs
+Assets/NCMB/Script/NCMBScript.cs
+Assets/NCMB/Script/NCMBSetOperation.cs
+Assets/NCMB/Script/NCMBTwitterParameters.cs
+Assets/NCMB/Script/NCMBUser.cs
+Assets/NCMB/Script/NCMBUtility.cs
+Assets/NCMB/Script/SimpleJSON.cs
+Assets/NCMB/Script/Task/NCMBObjectTaskExtension.cs
+Assets/NCMB/Script/Task/NCMBPushTaskExtension.cs
+Assets/NCMB/Script/Task/NcmbQueryTaskExtension.cs
+Assets/NCMB/Script/Task/NCMBScriptTaskExtension.cs
+Assets/NCMB/Script/Task/NCMBUserTaskExtension.cs
+Assets/NCMB/Script/Task/NCMBUserTaskMethods.cs
+Assets/TouchScript/Examples/_misc/Scripts/Checker.cs
+Assets/TouchScript/Examples/_misc/Scripts/ExamplesList.cs
+Assets/TouchScript/Examples/_misc/Scripts/Highlight.cs
+Assets/TouchScript/Examples/_misc/Scripts/KillMe.cs
+Assets/TouchScript/Examples/_misc/Scripts/Runner.cs
+Assets/TouchScript/Examples/_misc/Scripts/ShowMe.cs
+Assets/TouchScript/Examples/Camera/Scripts/CameraController.cs
+Assets/TouchScript/Examples/Checkers/Scripts/Board.cs
+Assets/TouchScript/Examples/Checkers/Scripts/Exclusive.cs
+Assets/TouchScript/Examples/Colors/Scripts/Circle.cs
+Assets/TouchScript/Examples/Colors/Scripts/Colors.cs
+Assets/TouchScript/Examples/Cube/Scripts/CustomPointerProxy.cs
+Assets/TouchScript/Examples/Cube/Scripts/Init.cs
+Assets/TouchScript/Examples/Cube/Scripts/LayerDelegate.cs
+Assets/TouchScript/Examples/Cube/Scripts/RedirectInput.cs
+Assets/TouchScript/Examples/Multiuser/Scripts/Logo.cs
+Assets/TouchScript/Examples/Photos/Scripts/Container.cs
+Assets/TouchScript/Examples/Photos/Scripts/SetColor.cs
+Assets/TouchScript/Examples/Portal/Scripts/Planet.cs
+Assets/TouchScript/Examples/Portal/Scripts/Rotator.cs
+Assets/TouchScript/Examples/Portal/Scripts/Spawner.cs
+Assets/TouchScript/Examples/Portal/Scripts/Vortex.cs
+Assets/TouchScript/Examples/RawInput/Scripts/Ball.cs
+Assets/TouchScript/Examples/RawInput/Scripts/Spawner.cs
+Assets/TouchScript/Examples/Taps/Scripts/Break.cs
+Assets/TouchScript/Examples/Taps/Scripts/Kick.cs
+Assets/TouchScript/Examples/Taps/Scripts/Spawn.cs
+Assets/TouchScript/Modules/TUIO/Scripts/InputSources/TuioInput.cs
+Assets/TouchScript/Scripts/Behaviors/Cursors/CursorManager.cs
+Assets/TouchScript/Scripts/Behaviors/Cursors/MouseCursor.cs
+Assets/TouchScript/Scripts/Behaviors/Cursors/ObjectCursor.cs
+Assets/TouchScript/Scripts/Behaviors/Cursors/PenCursor.cs
+Assets/TouchScript/Scripts/Behaviors/Cursors/PointerCursor.cs
+Assets/TouchScript/Scripts/Behaviors/Cursors/TouchCursor.cs
+Assets/TouchScript/Scripts/Behaviors/Cursors/UI/GradientTexture.cs
+Assets/TouchScript/Scripts/Behaviors/Cursors/UI/TextureSwitch.cs
+Assets/TouchScript/Scripts/Behaviors/Transformer.cs
+Assets/TouchScript/Scripts/Behaviors/UI/OverHelper.cs
+Assets/TouchScript/Scripts/Clusters/Clusters2D.cs
+Assets/TouchScript/Scripts/Core/DebuggableMonoBehaviour.cs
+Assets/TouchScript/Scripts/Core/GestureManagerInstance.cs
+Assets/TouchScript/Scripts/Core/LayerManagerInstance.cs
+Assets/TouchScript/Scripts/Core/TouchManagerInstance.cs
+Assets/TouchScript/Scripts/Debugging/Filters/IPointerDataFilter.cs
+Assets/TouchScript/Scripts/Debugging/Filters/IPointerLogFilter.cs
+Assets/TouchScript/Scripts/Debugging/Filters/PointerLogFilter.cs
+Assets/TouchScript/Scripts/Debugging/GL/DebugHelper.cs
+Assets/TouchScript/Scripts/Debugging/GL/GLDebug.cs
+Assets/TouchScript/Scripts/Debugging/Loggers/FileReaderLogger.cs
+Assets/TouchScript/Scripts/Debugging/Loggers/FileWriterLogger.cs
+Assets/TouchScript/Scripts/Debugging/Loggers/IPointerLogger.cs
+Assets/TouchScript/Scripts/Debugging/Loggers/PointerLogger.cs
+Assets/TouchScript/Scripts/Debugging/TouchScriptDebugger.cs
+Assets/TouchScript/Scripts/Devices/Display/DisplayDevice.cs
+Assets/TouchScript/Scripts/Devices/Display/GenericDisplayDevice.cs
+Assets/TouchScript/Scripts/Devices/Display/IDisplayDevice.cs
+Assets/TouchScript/Scripts/GestureManager.cs
+Assets/TouchScript/Scripts/Gestures/FlickGesture.cs
+Assets/TouchScript/Scripts/Gestures/Gesture.cs
+Assets/TouchScript/Scripts/Gestures/IGestureDelegate.cs
+Assets/TouchScript/Scripts/Gestures/LongPressGesture.cs
+Assets/TouchScript/Scripts/Gestures/MetaGesture.cs
+Assets/TouchScript/Scripts/Gestures/PressGesture.cs
+Assets/TouchScript/Scripts/Gestures/ReleaseGesture.cs
+Assets/TouchScript/Scripts/Gestures/TapGesture.cs
+Assets/TouchScript/Scripts/Gestures/TransformGestures/Base/OnePointTrasformGestureBase.cs
+Assets/TouchScript/Scripts/Gestures/TransformGestures/Base/TransformGestureBase.cs
+Assets/TouchScript/Scripts/Gestures/TransformGestures/Base/TwoPointTransformGestureBase.cs
+Assets/TouchScript/Scripts/Gestures/TransformGestures/Clustered/ClusteredPinnedTransformGesture.cs
+Assets/TouchScript/Scripts/Gestures/TransformGestures/Clustered/ClusteredScreenTransformGesture.cs
+Assets/TouchScript/Scripts/Gestures/TransformGestures/Clustered/ClusteredTransformGesture.cs
+Assets/TouchScript/Scripts/Gestures/TransformGestures/ITransformGesture.cs
+Assets/TouchScript/Scripts/Gestures/TransformGestures/PinnedTransformGesture.cs
+Assets/TouchScript/Scripts/Gestures/TransformGestures/ScreenTransformGesture.cs
+Assets/TouchScript/Scripts/Gestures/TransformGestures/TransformGesture.cs
+Assets/TouchScript/Scripts/Hit/HitData.cs
+Assets/TouchScript/Scripts/Hit/HitTest.cs
+Assets/TouchScript/Scripts/Hit/RaycastHitUI.cs
+Assets/TouchScript/Scripts/Hit/Untouchable.cs
+Assets/TouchScript/Scripts/IDebuggable.cs
+Assets/TouchScript/Scripts/IGestureManager.cs
+Assets/TouchScript/Scripts/ILayerManager.cs
+Assets/TouchScript/Scripts/InputSources/ICoordinatesRemapper.cs
+Assets/TouchScript/Scripts/InputSources/IInputSource.cs
+Assets/TouchScript/Scripts/InputSources/InputHandlers/MouseHandler.cs
+Assets/TouchScript/Scripts/InputSources/InputHandlers/TouchHandler.cs
+Assets/TouchScript/Scripts/InputSources/InputHandlers/WindowsPointerHandlers.cs
+Assets/TouchScript/Scripts/InputSources/InputSource.cs
+Assets/TouchScript/Scripts/InputSources/StandardInput.cs
+Assets/TouchScript/Scripts/ITouchManager.cs
+Assets/TouchScript/Scripts/LayerManager.cs
+Assets/TouchScript/Scripts/Layers/FullscreenLayer.cs
+Assets/TouchScript/Scripts/Layers/ILayerDelegate.cs
+Assets/TouchScript/Scripts/Layers/ProjectionParams.cs
+Assets/TouchScript/Scripts/Layers/StandardLayer.cs
+Assets/TouchScript/Scripts/Layers/TouchLayer.cs
+Assets/TouchScript/Scripts/Layers/UI/TouchScriptInputModule.cs
+Assets/TouchScript/Scripts/Pointers/FakePointer.cs
+Assets/TouchScript/Scripts/Pointers/IPointer.cs
+Assets/TouchScript/Scripts/Pointers/MousePointer.cs
+Assets/TouchScript/Scripts/Pointers/ObjectPointer.cs
+Assets/TouchScript/Scripts/Pointers/PenPointer.cs
+Assets/TouchScript/Scripts/Pointers/Pointer.cs
+Assets/TouchScript/Scripts/Pointers/PointerFactory.cs
+Assets/TouchScript/Scripts/Pointers/TouchPointer.cs
+Assets/TouchScript/Scripts/TouchManager.cs
+Assets/TouchScript/Scripts/Utils/Attributes/NullToggleAttribute.cs
+Assets/TouchScript/Scripts/Utils/Attributes/ToggleLeftAttribute.cs
+Assets/TouchScript/Scripts/Utils/BinaryUtils.cs
+Assets/TouchScript/Scripts/Utils/ClusterUtils.cs
+Assets/TouchScript/Scripts/Utils/EventHandlerExtensions.cs
+Assets/TouchScript/Scripts/Utils/Geom/ProjectionUtils.cs
+Assets/TouchScript/Scripts/Utils/Geom/TwoD.cs
+Assets/TouchScript/Scripts/Utils/ObjectPool.cs
+Assets/TouchScript/Scripts/Utils/Platform/WindowsUtils.cs
+Assets/TouchScript/Scripts/Utils/PointerUtils.cs
+Assets/TouchScript/Scripts/Utils/TimedSequence.cs
+Assets/TouchScript/Scripts/Utils/TransformUtils.cs
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\UnityScript.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\UnityScript.Lang.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\Boo.Lang.dll"
+-sdk:unity

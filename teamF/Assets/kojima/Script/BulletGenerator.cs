@@ -56,19 +56,19 @@ public class BulletGenerator : MonoBehaviour {
         float speed = obj.status.valueStatus.bounceSpeed;
         float dirX = Mathf.Cos(radian);
         float dirY = Mathf.Sin(radian);
-        instance.GetComponent<Bullet>().Velocity = new Vector2(dirX * speed, dirY * speed);
+        instance.GetComponent<Bullet>().velocity = new Vector2(dirX * speed, dirY * speed);
 
         // 当たり判定の種類を設定
         instance.GetComponent<Bullet>().colideType = obj.GetComponent<BeseObject>().colideType;
 
         // ステータスの反映
         instance.GetComponent<Bullet>().status.valueStatus = obj.GetComponent<BeseObject>().status.valueStatus;
+        instance.GetComponent<Bullet>().status.attackType = obj.GetComponent<BeseObject>().status.attackType;
 
         // 親の設定
         instance.transform.SetParent(GameObject.Find("TouchArea").transform);
 
         // 角度
         instance.gameObject.transform.Rotate(new Vector3(0.0f, 0.0f, radian * Mathf.Rad2Deg - 90.0f));
-
     }
 }

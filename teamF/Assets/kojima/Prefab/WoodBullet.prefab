@@ -114,6 +114,7 @@ MonoBehaviour:
       timeToActivate: 0
       timeToFinish: 0
       UpATK: 0
+  velocity: {x: 0, y: 0}
 --- !u!212 &212091934589972672
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -147,7 +148,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: bb3068fc83bfc524c98ea99c97b14446, type: 3}
   m_Color: {r: 0, g: 0.89705884, b: 0.30314413, a: 1}
   m_FlipX: 0

@@ -11,7 +11,8 @@ public class Shot : MonoBehaviour
 
     [HideInInspector]
     public bool flag = false;
-    float count = 0.0f;
+    [HideInInspector]
+    public float count = 0.0f;
     [HideInInspector]
     public float radian = 0.0f;
     
@@ -33,10 +34,6 @@ public class Shot : MonoBehaviour
                 bulletGenerator.Instance(this.gameObject.GetComponent<Character>(), radian);
                 count = 0.0f;
             }
-        }
-        else
-        {
-            count = baseObject.status.valueStatus.duration;
         }
     }
 }

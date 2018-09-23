@@ -16,7 +16,7 @@ public class Winpop : MonoBehaviour {
     public TapGesture tapGesture;
 
     int value = 1;      // 減らしていく値
-    int type = 0;
+    int type = -1;
     
 	// Use this for initialization
 	void Start () {
@@ -24,7 +24,7 @@ public class Winpop : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        switch (type)
+    switch (type)
         {
             case 0:
                 // 経験値の処理
@@ -97,7 +97,9 @@ public class Winpop : MonoBehaviour {
         {
 
         }
-
-        type++;
+        if(GetComponent<Pop>().isFull)
+        {
+            type++;
+        }
     }
 }

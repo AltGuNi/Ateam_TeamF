@@ -25,15 +25,18 @@ public class Wave : MonoBehaviour {
         // 敵がいなかった場合
         if (!flag)
         {
-            if (nextWave)
-            {
-                GameObject instance = Instantiate(nextWave);
-                instance.transform.SetParent(GameObject.Find("TouchArea").transform);
-            }
             // ボスウェーブの場合
             if (isBoss)
             {
                 GameObject.Find("GameTime").GetComponent<GameTime>().IsResult(true);
+            }
+            else
+            {
+                if (nextWave)
+                {
+                    GameObject instance = Instantiate(nextWave);
+                    instance.transform.SetParent(GameObject.Find("TouchArea").transform);
+                }
             }
             Destroy(this.gameObject);
         }

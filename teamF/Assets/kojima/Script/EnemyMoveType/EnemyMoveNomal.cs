@@ -13,11 +13,11 @@ public class EnemyMoveNomal : MonoBehaviour {
 
     float count = 0.0f;
 
-    Rigidbody2D rigidbody2D;
+    Rigidbody2D rigid2D;
 
     // Use this for initialization
     void Start () {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        rigid2D = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -35,22 +35,22 @@ public class EnemyMoveNomal : MonoBehaviour {
             {
                 if (transform.position.x <= -1.5f)
                 {
-                    rigidbody2D.velocity = new Vector2(speed.x, 0.0f);
+                    rigid2D.velocity = new Vector2(speed.x, 0.0f);
                 }
                 else if (transform.position.x >= 1.5f)
                 {
-                    rigidbody2D.velocity = new Vector2(-speed.x, 0.0f);
+                    rigid2D.velocity = new Vector2(-speed.x, 0.0f);
                 }
                 // xの速度が決まっていないとき
-                if (rigidbody2D.velocity.x == 0.0f)
+                if (rigid2D.velocity.x == 0.0f)
                 {
-                    rigidbody2D.velocity = new Vector2(speed.x, 0.0f);
+                    rigid2D.velocity = new Vector2(speed.x, 0.0f);
                 }
             }
             // 止まる場所まで移動
             else
             {
-                rigidbody2D.velocity = new Vector2(0.0f, -speed.y);
+                rigid2D.velocity = new Vector2(0.0f, -speed.y);
             }
         }
     }

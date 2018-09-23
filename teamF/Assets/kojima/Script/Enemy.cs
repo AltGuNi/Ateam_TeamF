@@ -32,7 +32,9 @@ public class Enemy : BeseObject{
             if (shotElapsedTime >= status.valueStatus.duration)
             {
                 shotElapsedTime = 0.0f;
-                bulletGenerator.Instance(this, Mathf.Deg2Rad * -90);
+                Vector3 pos = GameObject.Find("TouchArea").transform.Find("Player").position - transform.position;
+                float radian = Mathf.Atan2(pos.y, pos.x);
+                bulletGenerator.Instance(this, radian);
             }
         }
     }

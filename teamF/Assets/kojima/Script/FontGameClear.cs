@@ -10,6 +10,7 @@ public class FontGameClear : MonoBehaviour {
     public GameObject pop;
     public Blur blur;
     public TapGesture tapGesture;
+    public GameObject player;
     public float plusAlpha = 0.0f;
 
     Text text;
@@ -22,6 +23,7 @@ public class FontGameClear : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        player.GetComponent<Character>().colideType = BeseObject.CollideType.None;
         alpha += plusAlpha;
         if (alpha >= 1.0f)
         {
@@ -45,7 +47,7 @@ public class FontGameClear : MonoBehaviour {
     {
         if (alpha >= 1.0f)
         {
-            pop.SetActive(true);
+            pop.GetComponent<Pop>().SwitchPop();
             blur.isBlur();
             Destroy(this.gameObject);
         }

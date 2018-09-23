@@ -45,6 +45,7 @@ public class FontGameOver : MonoBehaviour {
     {
         if (alpha >= 1.0f)
         {
+
         }
         else
         {

@@ -4,12 +4,30 @@ using UnityEngine;
 
 public class Bullet : BeseObject {
 
+    float count = 0.0f;
+    [HideInInspector]
+    public Vector2 velocity = Vector2.zero;
+    Rigidbody2D rigid2D;
 	// Use this for initialization
 	void Start () {
+        rigid2D = GetComponent<Rigidbody2D>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+        switch (status.attackType)
+        {
+            case AttackType.StopNomal:
+                count += Time.deltaTime;
+                if (count >= 1.0f)
+                {
+                    rigid2D.velocity = velocity;
+                }
+                break;
+            default:
+                rigid2D.velocity = velocity;
+                break;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collide)
@@ -38,10 +56,5 @@ public class Bullet : BeseObject {
     {
         Destroy(this.gameObject);
     }
-
-    public Vector2 Velocity
-    {
-        get { var vel = GetComponent<Rigidbody2D>().velocity; return vel; }
-        set { GetComponent<Rigidbody2D>().velocity = value; }
-    }
+    
 }

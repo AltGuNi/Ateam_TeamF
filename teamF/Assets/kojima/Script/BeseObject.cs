@@ -26,6 +26,7 @@ public class BeseObject : MonoBehaviour {
     {
         Nomal,
         TwoWay,
+        StopNomal,
 
         Max
     };
