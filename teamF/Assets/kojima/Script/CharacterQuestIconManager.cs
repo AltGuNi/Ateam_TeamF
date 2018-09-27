@@ -14,15 +14,60 @@ public class CharacterQuestIconManager : MonoBehaviour {
     public Sprite fire;
     public Sprite wood;
     public Sprite water;
+
+    [SerializeField, Space(10)]
+    public Sprite nomalBig;
+    public Sprite fireBig;
+    public Sprite woodBig;
+    public Sprite waterBig;
+
+    [SerializeField, Space(10)]
+    public Sprite iconFrameBig;
+    public Sprite iconFramePlayBig;
+    public Sprite iconFrame;
+    public Sprite iconFramePlay;
     // Use this for initialization
     void Start () {
-		
+        if (iconFrameBig) first.iconFrame = iconFrameBig;
+        if (iconFramePlayBig) first.iconFramePlay = iconFramePlayBig;
+        if (iconFrame)
+        {
+            second.iconFrame = iconFrame;
+            third.iconFrame = iconFrame;
+            friend.iconFrame = iconFrame;
+        }
+        if (iconFramePlay)
+        { 
+            second.iconFrame = iconFramePlay;
+            third.iconFrame = iconFramePlay;
+            friend.iconFrame = iconFramePlay;
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        ChangeBase(first.transform.Find("base").GetComponent<Image>(), first);
-	}
+        Image image = first.transform.Find("base").GetComponent<Image>();
+        switch (first.playerInfo.chara[(int)first.charaNum].status.SpecialtyElement)
+        {
+            case BeseObject.Elements.Nomal:
+                image.sprite = nomalBig;
+                break;
+            case BeseObject.Elements.Fire:
+                image.sprite = fireBig;
+                break;
+            case BeseObject.Elements.Wood:
+                image.sprite = woodBig;
+                break;
+            case BeseObject.Elements.Water:
+                image.sprite = waterBig;
+                break;
+        }
+        //ChangeBase(first.transform.Find("base").GetComponent<Image>(), first);
+        ChangeBase(second.transform.Find("base").GetComponent<Image>(), second);
+
+        //ChangeBase(third.transform.Find("base").GetComponent<Image>(), third);
+        //ChangeBase(friend.transform.Find("base").GetComponent<Image>(), friend);
+    }
 
     public void AdvanceSkillTime(BeseObject.Elements elements)
     {

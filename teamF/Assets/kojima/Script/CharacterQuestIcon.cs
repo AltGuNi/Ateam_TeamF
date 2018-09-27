@@ -33,8 +33,9 @@ public class CharacterQuestIcon : MonoBehaviour {
             baseImage = gameObject.transform.GetChild(0).GetComponent<Image>();
 
             // アイコン画像の設定
-            gameObject.transform.GetChild(2).GetComponent<Image>().sprite = icon;
-            gameObject.transform.GetChild(2).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+            Image image = gameObject.transform.Find("icon").GetComponent<Image>();
+            image.sprite = icon;
+            image.color = new Color(1, 1, 1, 1);
         }
     }
 
@@ -84,7 +85,7 @@ public class CharacterQuestIcon : MonoBehaviour {
         {
             obj.GetComponent<Bullet>().Destroy();
         }
-        gameObject.transform.GetChild(1).GetComponent<Image>().sprite = iconFramePlay;
+        gameObject.transform.Find("flame").GetComponent<Image>().sprite = iconFramePlay;
         player.status.valueStatus.attack += playerInfo.chara[(int)charaNum].status.skillStatus.UpATK;
     }
 
@@ -96,7 +97,7 @@ public class CharacterQuestIcon : MonoBehaviour {
     // スキルの終了時
     public void FinishSkill()
     {
-        gameObject.transform.GetChild(1).GetComponent<Image>().sprite = iconFrame;
+        gameObject.transform.Find("flame").GetComponent<Image>().sprite = iconFrame;
         player.status.valueStatus.attack -= playerInfo.chara[(int)charaNum].status.skillStatus.UpATK;
     }
 

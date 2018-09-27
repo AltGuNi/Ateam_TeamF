@@ -57,6 +57,11 @@ public class UI_HP : MonoBehaviour {
         }
         floorHp = Mathf.Floor(obj.status.valueStatus.HP * 100.0f);
         floorHp2 = Mathf.Floor(maxhp * 100.0f);
+        if (obj.transform.name == "Player")
+        {
+            Debug.Log(floorHp / floorHp2);
+            Debug.Log(floorHp + " / " + floorHp2);
+        }
         hp.fillAmount = floorHp / floorHp2;
 
         redhp.fillAmount = hp.fillAmount + damagehp;
