@@ -20,13 +20,13 @@ public class Scroll_Menu : MonoBehaviour {
 	};
 
 	private float[] dark_level = {
+		0.5f,
 		0.3f,
-		0.2f,
 		0.1f,
 		0.0f,
 		0.1f,
-		0.2f,
-		0.3f
+		0.3f,
+		0.5f
 	};
 
 	private float startTime;
