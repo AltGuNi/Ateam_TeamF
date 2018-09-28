@@ -104,7 +104,10 @@ public class CharacterQuestIcon : MonoBehaviour {
 
         // プレイヤーの属性を変更
         buf = player.status.bulletElement;
-        player.status.bulletElement = playerInfo.chara[(int)charaNum].status.skillStatus.ChangeElement;
+        if (playerInfo.chara[(int)charaNum].status.skillStatus.ChangeElement != BeseObject.Elements.Max)
+        {
+            player.status.bulletElement = playerInfo.chara[(int)charaNum].status.skillStatus.ChangeElement;
+        }
     }
 
     // スキルの発動中

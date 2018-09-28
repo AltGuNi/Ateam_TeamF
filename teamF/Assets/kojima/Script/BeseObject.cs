@@ -1,5 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
+using UnityEditor;
+# endif
 using UnityEngine;
 
 public class BeseObject : MonoBehaviour {
@@ -107,6 +110,9 @@ public class BeseObject : MonoBehaviour {
         public AttackType attackType = AttackType.Nomal;        // 攻撃の種類
         public ValueStatus valueStatus = new ValueStatus();     // 値のステータス
         public SkillStatus skillStatus = SkillStatus.New();     // スキルステータス
+#if UNITY_EDITOR
+        [ReadOnly]
+#endif
         public SkillStatus upSkillStatus = SkillStatus.New();    // スキル向上値ステータス
         public SkillStatus UpSkillStatus
         {
@@ -199,3 +205,28 @@ public class BeseObject : MonoBehaviour {
         }
     }
 }
+#if UNITY_EDITOR
+public class ReadOnlyAttribute : PropertyAttribute
+{
+
+}
+
+[CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
+public class ReadOnlyDrawer : PropertyDrawer
+{
+    public override float GetPropertyHeight(SerializedProperty property,
+                                            GUIContent label)
+    {
+        return EditorGUI.GetPropertyHeight(property, label, true);
+    }
+
+    public override void OnGUI(Rect position,
+                               SerializedProperty property,
+                               GUIContent label)
+    {
+        GUI.enabled = false;
+        EditorGUI.PropertyField(position, property, label, true);
+        GUI.enabled = true;
+    }
+}
+# endif
