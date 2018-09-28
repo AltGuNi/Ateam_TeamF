@@ -36,18 +36,21 @@ public class Bullet : BeseObject {
         {
             return;
         }
-        if (collide.gameObject.GetComponent<BeseObject>())
+        BeseObject baseObject = collide.gameObject.GetComponent<BeseObject>();
+        if (baseObject)
         {
-            if (BeseObject.CollideType.Neutral == collide.gameObject.GetComponent<BeseObject>().colideType)
+            if (BeseObject.CollideType.Neutral == baseObject.colideType)
             {
-                collide.gameObject.GetComponent<BeseObject>().BeDamaged(status.valueStatus.attack, status.bulletElement);
+                baseObject.BeDamaged(status);
+
                 GameObject.Find("HitEffectManager").GetComponent<HitEffectManager>().HitEffectPlay(transform.position);
                 Destroy(this.gameObject);
             }
-            else if (colideType != collide.gameObject.GetComponent<BeseObject>().colideType &&
-                BeseObject.CollideType.None != collide.gameObject.GetComponent<BeseObject>().colideType)
+            else if (colideType != baseObject.colideType &&
+                BeseObject.CollideType.None != baseObject.colideType)
             {
-                collide.gameObject.GetComponent<BeseObject>().BeDamaged(status.valueStatus.attack, status.bulletElement);
+                baseObject.BeDamaged(status);
+
                 GameObject.Find("HitEffectManager").GetComponent<HitEffectManager>().HitEffectPlay(transform.position);
                 Destroy(this.gameObject);
             }

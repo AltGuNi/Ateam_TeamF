@@ -11,6 +11,7 @@ public class PlayerInfo : MonoBehaviour {
     public int currentExperience;      // 現在の経験値
     public int nextExperience;         // 次のレベルまでの経験値量
     public int gold;                   // 所持金
+    public int colorStone;             // カラーストーン 
 
     public enum CharaNum
     {
