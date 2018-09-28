@@ -53,17 +53,15 @@ public class BulletGenerator : MonoBehaviour {
         instance.gameObject.transform.position = obj.gameObject.transform.position;
 
         // 速度
-        float speed = obj.status.valueStatus.bounceSpeed;
+        float speed = (obj.status.valueStatus.bounceSpeed + obj.status.UpSkillStatus.UpBounceSpeed) * obj.status.UpSkillStatus.MAG_BounceSpeed;
         float dirX = Mathf.Cos(radian);
         float dirY = Mathf.Sin(radian);
         instance.GetComponent<Bullet>().velocity = new Vector2(dirX * speed, dirY * speed);
 
         // 当たり判定の種類を設定
         instance.GetComponent<Bullet>().colideType = obj.GetComponent<BeseObject>().colideType;
-
         // ステータスの反映
-        instance.GetComponent<Bullet>().status.valueStatus = obj.GetComponent<BeseObject>().status.valueStatus;
-        instance.GetComponent<Bullet>().status.attackType = obj.GetComponent<BeseObject>().status.attackType;
+        instance.GetComponent<Bullet>().status = obj.GetComponent<BeseObject>().status;
 
         // 親の設定
         instance.transform.SetParent(GameObject.Find("TouchArea").transform);

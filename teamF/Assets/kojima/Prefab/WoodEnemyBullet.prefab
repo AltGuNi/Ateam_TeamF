@@ -79,7 +79,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3, y: 3}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colideType: 0
   status:
-    bulletElement: 3
+    bulletElement: 2
     SpecialtyElement: 0
     attackType: 0
     valueStatus:
@@ -114,6 +114,22 @@ MonoBehaviour:
       timeToActivate: 0
       timeToFinish: 0
       UpATK: 0
+      CureHP: 0
+      UpBounceSpeed: 0
+      DownDuration: 0
+      MAG_UpATK: 0
+      MAG_UpBounceSpeed: 0
+      MAG_DownDuration: 0
+    _skillStatus:
+      timeToActivate: 0
+      timeToFinish: 0
+      UpATK: 0
+      CureHP: 0
+      UpBounceSpeed: 0
+      DownDuration: 0
+      MAG_UpATK: 0
+      MAG_UpBounceSpeed: 0
+      MAG_DownDuration: 0
   velocity: {x: 0, y: 0}
 --- !u!212 &212639814257879814
 SpriteRenderer:
@@ -149,8 +165,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 44d5d40542d216c449570639472654ef, type: 3}
-  m_Color: {r: 0.108185545, g: 0.6397059, b: 0.199827, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3b8eee878fad77842b4d4c85fa8074ab, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colideType: 0
   status:
-    bulletElement: 2
+    bulletElement: 3
     SpecialtyElement: 0
     attackType: 0
     valueStatus:
@@ -114,6 +114,22 @@ MonoBehaviour:
       timeToActivate: 0
       timeToFinish: 0
       UpATK: 0
+      CureHP: 0
+      UpBounceSpeed: 0
+      DownDuration: 0
+      MAG_UpATK: 0
+      MAG_UpBounceSpeed: 0
+      MAG_DownDuration: 0
+    _skillStatus:
+      timeToActivate: 0
+      timeToFinish: 0
+      UpATK: 0
+      CureHP: 0
+      UpBounceSpeed: 0
+      DownDuration: 0
+      MAG_UpATK: 0
+      MAG_UpBounceSpeed: 0
+      MAG_DownDuration: 0
   velocity: {x: 0, y: 0}
 --- !u!212 &212727007611853428
 SpriteRenderer:
