@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TouchScript.Gestures;
+using UnityEngine.SceneManagement;
 
 public class Winpop : MonoBehaviour {
 
@@ -118,7 +119,7 @@ public class Winpop : MonoBehaviour {
         // ホーム画面に遷移
         if (type >= 2)
         {
-
+            SceneManager.LoadScene("main_menu");
         }
         if(GetComponent<Pop>().isFull)
         {
