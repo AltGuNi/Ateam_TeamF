@@ -18,7 +18,6 @@ public class SkillEffectManager : MonoBehaviour {
 
     public void SkillEffectPlay()
     {
-        //skillEffect.Play();
         skillEffect.Emit(1);
     }
 }

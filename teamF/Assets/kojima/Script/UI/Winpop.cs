@@ -10,10 +10,14 @@ public class Winpop : MonoBehaviour {
 
     public PlayerInfo playerInfo;
     public QuestInfo questInfo;
-    public Text lv;
-    public Text nextExperience;
-    public Text experience;
-    public Text gold;
+    //public Text lv;
+    //public Text nextExperience;
+    //public Text experience;
+    //public Text gold;
+    public Num lv;
+    public Num nextExperience;
+    public Num experience;
+    public Num gold;
 
     public TapGesture tapGesture;
     public float delayTime = 0.0f;
@@ -75,10 +79,10 @@ public class Winpop : MonoBehaviour {
             playerInfo.currentExperience = playerInfo.currentExperience % playerInfo.nextExperience;
         }
 
-        lv.text = playerInfo.level.ToString();
-        experience.text = playerInfo.currentExperience.ToString();
-        nextExperience.text = playerInfo.nextExperience.ToString();
-        gold.text = playerInfo.gold.ToString();
+        lv.num = playerInfo.level.ToString();
+        experience.num = playerInfo.currentExperience.ToString();
+        nextExperience.num = playerInfo.nextExperience.ToString();
+        gold.num = playerInfo.gold.ToString();
 
         countToDoubleTime += Time.deltaTime;
         if ((type >= 0) &&

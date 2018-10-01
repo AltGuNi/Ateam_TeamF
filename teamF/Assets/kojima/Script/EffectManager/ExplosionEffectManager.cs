@@ -9,7 +9,6 @@ public class ExplosionEffectManager : MonoBehaviour {
     public int emitCount = 9;
 
     List<Vector3> poslist = new List<Vector3>();
-    int count = 0;
     // Use this for initialization
     void Start () {
 		
@@ -23,12 +22,10 @@ public class ExplosionEffectManager : MonoBehaviour {
             explosionEffect.Emit(emitCount);
         }
         poslist.Clear();
-        count = 0;
     }
 
     public void ExploisonEffectPlay(Vector3 pos)
     {
         poslist.Add(pos);
-        count++;
     }
 }

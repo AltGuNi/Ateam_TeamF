@@ -151,7 +151,7 @@ public class BeseObject : MonoBehaviour {
             {
                 // 無効属性を求める
                 bufElement = (int)status.bulletElement + 1;
-                if (bufElement >= (int)Elements.Max - 1)
+                if (bufElement >= (int)Elements.Max)
                 {
                     bufElement = 1;
                 }

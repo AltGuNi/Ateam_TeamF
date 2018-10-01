@@ -4,19 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TouchScript.Gestures;
+using UnityEngine.SceneManagement;
 
 public class FontGameOver : MonoBehaviour {
 
     public TapGesture tapGesture;
     public float plusAlpha = 0.0f;
+    public Blur blur;
 
-    Text text;
+    Image image;
     float alpha = 0.0f;
     // Use this for initialization
     void Start () {
 
-        text = GetComponent<Text>();
-        text.color = new Color(1, 1, 1, alpha);
+        image = GetComponent<Image>();
+        image.color = new Color(1, 1, 1, alpha);
+        blur.isBlur();
     }
 	
 	// Update is called once per frame
@@ -27,7 +30,7 @@ public class FontGameOver : MonoBehaviour {
         {
             alpha = 1.0f;
         }
-        text.color = new Color(1, 1, 1, alpha);
+        image.color = new Color(1, 1, 1, alpha);
     }
 
     private void OnEnable()
@@ -45,7 +48,7 @@ public class FontGameOver : MonoBehaviour {
     {
         if (alpha >= 1.0f)
         {
-
+            SceneManager.LoadScene("main_menu");
         }
         else
         {
