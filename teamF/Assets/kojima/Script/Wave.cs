@@ -5,13 +5,17 @@ using UnityEngine;
 public class Wave : MonoBehaviour {
 
     public GameObject nextWave;
-    public bool isBoss = false;
-    GameObject fontWave;
+
+    [HideInInspector]
+    public FontWava fontWave;
+    GameTime gameTime;
 	// Use this for initialization
 	void Start ()
     {
-        fontWave = GameObject.Find("TouchArea").transform.Find("Canvas").Find("FontWave").gameObject;
-        fontWave.GetComponent<FontWava>().NextWave(isBoss);
+        if (!nextWave)
+        {
+            gameTime = GameObject.Find("GameTime").GetComponent<GameTime>();
+        }
     }
 	
 	// Update is called once per frame
@@ -26,19 +30,18 @@ public class Wave : MonoBehaviour {
         if (!flag)
         {
             // ボスウェーブの場合
-            if (isBoss)
+            if (!nextWave)
             {
-                GameObject.Find("GameTime").GetComponent<GameTime>().IsResult(true);
+                gameTime.IsResult(true);
             }
             else
             {
                 if (nextWave)
                 {
-                    GameObject instance = Instantiate(nextWave);
-                    instance.transform.SetParent(GameObject.Find("TouchArea").transform);
+                    fontWave.NextWave(nextWave);
                 }
             }
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }
