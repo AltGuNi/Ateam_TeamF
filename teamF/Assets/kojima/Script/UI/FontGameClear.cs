@@ -13,13 +13,14 @@ public class FontGameClear : MonoBehaviour {
     public GameObject player;
     public float plusAlpha = 0.0f;
 
-    Text text;
+    Image image;
     float alpha = 0.0f;
     // Use this for initialization
     void Start () {
-        text = GetComponent<Text>();
-        text.color = new Color(1, 1, 1, alpha);
-	}
+        image = GetComponent<Image>();
+        image.color = new Color(1, 1, 1, alpha);
+        blur.isBlur();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -29,7 +30,7 @@ public class FontGameClear : MonoBehaviour {
         {
             alpha = 1.0f;
         }
-        text.color = new Color(1, 1, 1, alpha);
+        image.color = new Color(1, 1, 1, alpha);
     }
 
     private void OnEnable()
@@ -48,7 +49,6 @@ public class FontGameClear : MonoBehaviour {
         if (alpha >= 1.0f)
         {
             pop.GetComponent<Pop>().SwitchPop();
-            blur.isBlur();
             Destroy(this.gameObject);
         }
         else

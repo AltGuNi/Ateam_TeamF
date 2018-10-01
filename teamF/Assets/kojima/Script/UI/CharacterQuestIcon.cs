@@ -26,6 +26,7 @@ public class CharacterQuestIcon : MonoBehaviour {
     public bool isSkillStop = false;        // スキル発動の停止
 
     BeseObject.Elements buf;                // スキル発動時に記録する用
+    Transform effectPos;                    // アイコンのエフェクトを発動する場所
 
     // Use this for initialization
     void Start()
@@ -33,12 +34,14 @@ public class CharacterQuestIcon : MonoBehaviour {
         if (playerInfo.chara[(int)charaNum])
         {
             timeToActivate = playerInfo.chara[(int)charaNum].status.skillStatus.timeToActivate;
-            baseImage = gameObject.transform.GetChild(0).GetComponent<Image>();
+            baseImage = gameObject.transform.Find("base").GetComponent<Image>();
 
             // アイコン画像の設定
             Image image = gameObject.transform.Find("icon").GetComponent<Image>();
             image.sprite = playerInfo.chara[(int)charaNum].icon;
             image.color = new Color(1, 1, 1, 1);
+
+            effectPos = gameObject.transform.Find("effectPos");
         }
     }
 
@@ -86,7 +89,20 @@ public class CharacterQuestIcon : MonoBehaviour {
     public void ActivateSkill()
     {
         timeToActivate = playerInfo.chara[(int)charaNum].status.skillStatus.timeToActivate;
+
+        // エフェクトの処理
         GameObject.Find("SkillEffectManager").GetComponent<SkillEffectManager>().SkillEffectPlay();
+
+        if (charaNum == PlayerInfo.CharaNum.First)
+        {
+            GameObject.Find("SkillIconEffectManager").GetComponent<SkillIconEffectManager>().SkillIconBigEffectPlay(effectPos.position);
+        }
+        else
+        {
+            GameObject.Find("SkillIconEffectManager").GetComponent<SkillIconEffectManager>().SkillIconEffectPlay(effectPos.position);
+        }
+
+        // 弾を全部消す
         GameObject[] bullet = GameObject.FindGameObjectsWithTag("Bullet");
         foreach (GameObject obj in bullet)
         {
