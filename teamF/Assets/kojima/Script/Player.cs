@@ -14,7 +14,6 @@ public class Player : MonoBehaviour {
     Character character;
     // Use this for initialization
     void Start () {
-
         shot = GetComponent<Shot>();
         character = GetComponent<Character>();
     }
@@ -34,6 +33,7 @@ public class Player : MonoBehaviour {
         // 倒されたとき時間を止め進める
         if (character.status.valueStatus.HP <= 0.0f)
         {
+            GameObject.Find("ExplosionEffectManager").GetComponent<ExplosionEffectManager>().ExploisonEffectPlay(transform.position);
             gameTime.IsResult(false);
             this.gameObject.SetActive(false);
         }

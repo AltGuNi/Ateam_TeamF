@@ -67,7 +67,6 @@ public class GameTime : MonoBehaviour {
                 }
             }
         }
-
     }
 
     public void IsSlow()
