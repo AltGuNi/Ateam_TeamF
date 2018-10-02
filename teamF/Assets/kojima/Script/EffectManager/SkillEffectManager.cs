@@ -5,12 +5,12 @@ using UnityEngine;
 public class SkillEffectManager : MonoBehaviour {
 
     public ParticleSystem skillEffect;              // スキルエフェクト
-    public AudioClip skill_audio;
-  	private AudioSource audioSource;
-                                                    // Use this for initialization
-    void Start () {
-		    audioSource = gameObject.GetComponent<AudioSource> ();
-	}
+    BattleSoundManager battleSoundManager;
+    // Use this for initialization
+    void Start ()
+    {
+        battleSoundManager = GameObject.Find("BattleSoundManager").GetComponent<BattleSoundManager>();
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -20,9 +20,6 @@ public class SkillEffectManager : MonoBehaviour {
     public void SkillEffectPlay()
     {
         skillEffect.Emit(1);
-        if (audioSource)
-        {
-            audioSource.PlayOneShot(skill_audio);
-        }
+        battleSoundManager.PlaySound(BattleSoundManager.Type.PlaySkill);
     }
 }
