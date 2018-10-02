@@ -14,9 +14,12 @@ public class FontGameOver : MonoBehaviour {
 
     Image image;
     float alpha = 0.0f;
+    BattleSoundManager battleSoundManager;
     // Use this for initialization
     void Start () {
 
+        battleSoundManager = GameObject.Find("BattleSoundManager").GetComponent<BattleSoundManager>();
+        battleSoundManager.PlaySound(BattleSoundManager.Type.GameOver);
         image = GetComponent<Image>();
         image.color = new Color(1, 1, 1, alpha);
         blur.isBlur();

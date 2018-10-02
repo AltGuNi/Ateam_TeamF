@@ -9,10 +9,13 @@ public class HitEffectManager : MonoBehaviour {
     public int emitCount = 9;
 
     List<Vector3> poslist = new List<Vector3>();
+    BattleSoundManager battleSoundManager;
     // Use this for initialization
-    void Start () {
-		
-	}
+    void Start ()
+    {
+        battleSoundManager = GameObject.Find("BattleSoundManager").GetComponent<BattleSoundManager>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,6 +23,7 @@ public class HitEffectManager : MonoBehaviour {
         {
             hitEffect.transform.position = pos + _camera.transform.forward * 10;
             hitEffect.Emit(emitCount);
+            battleSoundManager.PlaySound(BattleSoundManager.Type.PlaySkill);
         }
         poslist.Clear();
 	}

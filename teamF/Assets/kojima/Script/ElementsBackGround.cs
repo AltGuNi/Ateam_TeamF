@@ -14,9 +14,11 @@ public class ElementsBackGround : MonoBehaviour {
 
     BackGround.ElementsInfo elementInfo;
 
+    BattleSoundManager battleSoundManager;
     // Use this for initialization
     void Start()
     {
+        battleSoundManager = GameObject.Find("BattleSoundManager").GetComponent<BattleSoundManager>();
         RnadomElement();
 
         if (isLeft)
@@ -78,6 +80,7 @@ public class ElementsBackGround : MonoBehaviour {
         if (player)
         {
             player.GetComponent<Character>().status.bulletElement = elements;
+            battleSoundManager.PlaySound(BattleSoundManager.Type.ChangeElement);
         }
     }
 }
