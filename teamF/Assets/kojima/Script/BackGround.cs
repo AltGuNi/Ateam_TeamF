@@ -9,21 +9,17 @@ public class BackGround : MonoBehaviour {
     [System.Serializable]
     public class ElementsInfo
     {
-        public string name;
-        
+
+        public BeseObject.Elements elements;
         [SerializeField, Range(0, 100)]
         public int rate;
 
         [SerializeField,Space(10)]
         public Sprite[] sprite;
 
-        [HideInInspector]
-        public BeseObject.Elements elements; 
-
         public ElementsInfo(BeseObject.Elements elements)
         {
             this.elements = elements;
-            this.name = elements.ToString();
             rate = 0;
             sprite = null;
         }

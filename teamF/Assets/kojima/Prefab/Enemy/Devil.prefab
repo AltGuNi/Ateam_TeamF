@@ -153,14 +153,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colideType: 2
   status:
-    bulletElement: 1
-    SpecialtyElement: 4
+    bulletElement: 2
+    specialtyElement: 0
     attackType: 2
     valueStatus:
-      HP: 1
-      attack: 10
+      HP: 640
+      attack: 2
       defence: 0
-      bounceSpeed: 1
+      bounceSpeed: 4
       duration: 0.3
     skillStatus:
       timeToActivate: 0
@@ -169,19 +169,21 @@ MonoBehaviour:
       CureHP: 0
       UpBounceSpeed: 0
       DownDuration: 0
-      MAG_UpATK: 1
-      MAG_UpBounceSpeed: 1
-      MAG_DownDuration: 1
-    _skillStatus:
+      ChangeElement: 5
+      MAG_ATK: 1
+      MAG_BounceSpeed: 1
+      MAG_Duration: 1
+    upSkillStatus:
       timeToActivate: 0
       timeToFinish: 0
       UpATK: 0
       CureHP: 0
       UpBounceSpeed: 0
       DownDuration: 0
-      MAG_UpATK: 1
-      MAG_UpBounceSpeed: 1
-      MAG_DownDuration: 1
+      ChangeElement: 5
+      MAG_ATK: 1
+      MAG_BounceSpeed: 1
+      MAG_Duration: 1
   experence: 0
   gold: 0
 --- !u!114 &114824961135897348
@@ -195,7 +197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d0a0484500509409ed00bc3b560a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: []
+  action:
+  - timeInterval: 1
+    countBullet: 3
+    element: 0
 --- !u!114 &114962865365765462
 MonoBehaviour:
   m_ObjectHideFlags: 1

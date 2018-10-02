@@ -17,6 +17,7 @@ public class BeseObject : MonoBehaviour {
     };
     public enum Elements
     {
+        None,
         Nomal,
         Fire,
         Wood,
@@ -137,7 +138,7 @@ public class BeseObject : MonoBehaviour {
         {
             // 弱点属性を求める
             int bufElement = (int)status.bulletElement - 1;
-            if (bufElement <= 0)
+            if (bufElement <= (int)Elements.Nomal)
             {
                 bufElement = (int)Elements.Max - 1;
             }
@@ -153,7 +154,7 @@ public class BeseObject : MonoBehaviour {
                 bufElement = (int)status.bulletElement + 1;
                 if (bufElement >= (int)Elements.Max)
                 {
-                    bufElement = 1;
+                    bufElement = (int)Elements.Fire;
                 }
                 // 無効属性の処理
                 if ((int)enemy.bulletElement == bufElement)

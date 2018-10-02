@@ -9,6 +9,7 @@ public class EnemyShot : MonoBehaviour {
     {
         public float timeInterval = 1.0f;
         public int countBullet = 3;
+        public BeseObject.Elements element = BeseObject.Elements.None;
     }
 
     public Action[] action;
@@ -18,6 +19,7 @@ public class EnemyShot : MonoBehaviour {
 
     SpriteRenderer spriteRenderer;
     GameObject player;
+    BeseObject enemy;
     Shot shot;
 
     // Use this for initialization
@@ -25,7 +27,15 @@ public class EnemyShot : MonoBehaviour {
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.Find("TouchArea").transform.Find("Player").gameObject;
+        enemy = GetComponent<Enemy>();
         shot = GetComponent<Shot>();
+        for (int i = 0; i < action.Length; i++)
+        {
+            if (action[i].element == BeseObject.Elements.None)
+            {
+                action[i].element = enemy.status.bulletElement;
+            }
+        }
     }
 	
 	// Update is called once per frame
@@ -41,6 +51,7 @@ public class EnemyShot : MonoBehaviour {
             else
             {
                 shot.flag = true;
+                enemy.status.bulletElement = action[actionCount].element;
                 Vector3 pos = player.transform.position - transform.position;
                 shot.radian = Mathf.Atan2(pos.y, pos.x);
                 if (shot.countBullet >= action[actionCount].countBullet)
