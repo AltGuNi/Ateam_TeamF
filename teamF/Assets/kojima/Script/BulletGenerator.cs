@@ -15,16 +15,22 @@ public class BulletGenerator : MonoBehaviour {
     [SerializeField]
     GameObject woodbulletPrefab;
 
+    public AudioClip Nomal;
+    public AudioClip Wood;
+    public AudioClip Fire;
+    public AudioClip Water;
+    private AudioSource audioSource;
+
     // Use this for initialization
     void Start () {
-		
+		audioSource = gameObject.GetComponent<AudioSource> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
-    
+
     public void Instance(BeseObject obj, float radian)
     {
         GameObject instance;
@@ -33,15 +39,19 @@ public class BulletGenerator : MonoBehaviour {
         {
             case BeseObject.Elements.Nomal:
                 instance = Instantiate(nomalbulletPrefab);
+                audioSource.PlayOneShot (Nomal);
                 break;
             case BeseObject.Elements.Fire:
                 instance = Instantiate(firebulletPrefab);
+                audioSource.PlayOneShot (Fire);
                 break;
             case BeseObject.Elements.Water:
                 instance = Instantiate(waterbulletPrefab);
+                audioSource.PlayOneShot (Water);
                 break;
             case BeseObject.Elements.Wood:
                 instance = Instantiate(woodbulletPrefab);
+                audioSource.PlayOneShot (Wood);
                 break;
 
             default:

@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 141652440}
   - component: {fileID: 141652439}
   - component: {fileID: 141652441}
+  - component: {fileID: 141652442}
   m_Layer: 0
   m_Name: menu
   m_TagString: Untagged
@@ -357,6 +358,86 @@ CircleCollider2D:
   m_Offset: {x: -3.0984876, y: -0.564065}
   serializedVersion: 2
   m_Radius: 2.8798864
+--- !u!82 &141652442
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141652438}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &245074530
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_scene: test
   tapGesture: {fileID: 329020808}
+  audio: {fileID: 0}
 --- !u!114 &329020802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,6 +1234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_scene: test
   tapGesture: {fileID: 570152819}
+  audio: {fileID: 0}
 --- !u!114 &570152819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1357,6 +1440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_scene: test
   tapGesture: {fileID: 668750619}
+  audio: {fileID: 0}
 --- !u!114 &668750619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,6 +1833,7 @@ GameObject:
   - component: {fileID: 864089940}
   - component: {fileID: 864089939}
   - component: {fileID: 864089938}
+  - component: {fileID: 864089943}
   m_Layer: 0
   m_Name: home_5_Bace
   m_TagString: Untagged
@@ -1769,6 +1854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_scene: start
   tapGesture: {fileID: 864089939}
+  audio: {fileID: 8300000, guid: 997e27534cd96e94ba41e4743c63945a, type: 3}
 --- !u!114 &864089939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1890,6 +1976,86 @@ Transform:
   m_Father: {fileID: 1730191222}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &864089943
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864089937}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &868252505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2773,7 +2939,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  basicEditor: 1
+  basicEditor: 0
   generalProps: 0
   limitsProps: 0
   advancedProps: 0
@@ -3539,6 +3705,7 @@ GameObject:
   - component: {fileID: 1612879462}
   - component: {fileID: 1612879461}
   - component: {fileID: 1612879463}
+  - component: {fileID: 1612879465}
   m_Layer: 0
   m_Name: Quest_menu
   m_TagString: Untagged
@@ -3635,6 +3802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_scene: quest_select
   tapGesture: {fileID: 1612879462}
+  audio: {fileID: 8300000, guid: 997e27534cd96e94ba41e4743c63945a, type: 3}
 --- !u!114 &1612879462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3732,6 +3900,86 @@ MonoBehaviour:
   minDistance: 1
   movementThreshold: 0.5
   direction: 0
+--- !u!82 &1612879465
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1612879457}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1648781403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3962,6 +4210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_scene: test
   tapGesture: {fileID: 1721829184}
+  audio: {fileID: 0}
 --- !u!114 &1721829184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4323,6 +4572,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 1c4dd8a13f501b04f84fe824120f70bb, type: 2}
+      propertyPath: layers.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 1c4dd8a13f501b04f84fe824120f70bb, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
