@@ -16,12 +16,10 @@ public class Num : MonoBehaviour {
     public Sprite num_8;
     public Sprite num_9;
 
-    public string num;
+    public int num;
     public bool isAll = false;
 
     List<Image> digitList = new List<Image>();
-    string currentNumber;
-    string lastNumber;
 
 	// Use this for initialization
 	void Start () {
@@ -33,8 +31,7 @@ public class Num : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        SetNumber(num);
-        lastNumber = currentNumber;
+        SetNumber(num.ToString());
 	}
 
     public void SetNumber(string _num)

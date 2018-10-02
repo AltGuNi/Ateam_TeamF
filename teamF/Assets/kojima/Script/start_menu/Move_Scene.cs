@@ -44,10 +44,14 @@ public class Move_Scene : MonoBehaviour {
 
     private void OnTapped( object sender, EventArgs e )
     {
-				audioSource.PlayOneShot (audio);
+        if (audioSource)
+        {
+            audioSource.PlayOneShot(audio);
+        }
 				StartCoroutine(DelayMethod(30, () =>
     	{
         SceneManager.LoadScene(move_scene);
+            Time.timeScale = 1.0f;
     	}));
 
     }

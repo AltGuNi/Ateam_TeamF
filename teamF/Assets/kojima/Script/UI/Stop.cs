@@ -13,21 +13,14 @@ public class Stop : MonoBehaviour {
 	void Update () {
 		
 	}
-
-    public static void StopTimeScele()
-    {
-        if (Time.timeScale != 0)
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1.0f;
-        }
-    }
-
+    
     public void StopGame()
     {
-        StopTimeScele();
+        Time.timeScale = 0;
+    }
+
+    public void PlayGame()
+    {
+        Time.timeScale = 1.0f;
     }
 }

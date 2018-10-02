@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Firest.unity
+    guid: 6ee9b7e6d5983f84cbf046e831cdf499
+  - enabled: 1
     path: Assets/start.unity
     guid: 5ff53614915baed49bb31f57c5919274
   - enabled: 1

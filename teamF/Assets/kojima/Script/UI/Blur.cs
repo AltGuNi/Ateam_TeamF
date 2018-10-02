@@ -44,4 +44,9 @@ public class Blur : MonoBehaviour {
             flag = true;
         }
     }
+
+    public void ClozeBlur()
+    {
+        flag = false;
+    }
 }

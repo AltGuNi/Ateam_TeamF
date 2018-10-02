@@ -12,7 +12,7 @@ public class FadeManager : MonoBehaviour {
 
 	void Start () {
 		audioSource = gameObject.GetComponent<AudioSource> ();
-        a = Panel.GetComponent<Image>().color.a;
+        a = Panel.GetComponent<SpriteRenderer>().color.a;
 	}
 
 //Aキーを押されたらフェード開始
@@ -21,7 +21,6 @@ public class FadeManager : MonoBehaviour {
             StartCoroutine(FadePanel());
 						SceneManager.LoadScene ("Start");
 						audioSource.PlayOneShot (audio);
-
 	}
 
 //フェードアウト自体は↓の処理
@@ -29,7 +28,7 @@ public class FadeManager : MonoBehaviour {
     {
         while(a < 10)
         {
-            Panel.GetComponent<Image>().color += new Color(0, 0, 0, 0.01f);
+            Panel.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 0.01f);
             a += 0.01f;
             yield return null;
         }

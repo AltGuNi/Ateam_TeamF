@@ -10,6 +10,7 @@ public class EnemeyHpGenerator : MonoBehaviour {
 	void Start () {
         GameObject instance = Instantiate(hpPrefab);
         instance.GetComponent<UI_HP>().obj = this.gameObject.GetComponent<BeseObject>();
+        instance.transform.FindChild("element").GetComponent<EnemyHPIcon>().obj = this.gameObject.GetComponent<BeseObject>();
         instance.transform.SetParent(GameObject.Find("TouchArea").transform.Find("EnemyHpCanvas"));
         instance.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
     }

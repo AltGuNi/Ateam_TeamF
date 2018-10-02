@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_scene: main_menu
   tapGesture: {fileID: 213161146}
+  audio: {fileID: 0}
 --- !u!114 &213161146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +271,10 @@ Prefab:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 515395369}
+    - target: {fileID: 1677707491717564, guid: bfddbd650e765ef4987defdddcf13c9b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfddbd650e765ef4987defdddcf13c9b, type: 2}
   m_IsPrefabParent: 0
@@ -1012,6 +1017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_scene: test
   tapGesture: {fileID: 1788931344}
+  audio: {fileID: 0}
 --- !u!114 &1788931344
 MonoBehaviour:
   m_ObjectHideFlags: 0

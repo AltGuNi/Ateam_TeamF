@@ -20,6 +20,9 @@ public class SkillEffectManager : MonoBehaviour {
     public void SkillEffectPlay()
     {
         skillEffect.Emit(1);
-        audioSource.PlayOneShot (skill_audio);
+        if (audioSource)
+        {
+            audioSource.PlayOneShot(skill_audio);
+        }
     }
 }

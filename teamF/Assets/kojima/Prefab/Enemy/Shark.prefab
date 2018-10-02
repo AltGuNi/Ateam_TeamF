@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552c787ad728e1a4a9e3a48b254b8b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpPrefab: {fileID: 1041157109469172, guid: a53fd272762bf6541941bb2b9898e4b5, type: 2}
+  hpPrefab: {fileID: 1282030578476488, guid: e977257009b0e1848a80fd5daa67849d, type: 2}
 --- !u!114 &114323985969936314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,7 +178,7 @@ MonoBehaviour:
   colideType: 2
   status:
     bulletElement: 3
-    SpecialtyElement: 4
+    specialtyElement: 5
     attackType: 2
     valueStatus:
       HP: 1
@@ -193,19 +193,21 @@ MonoBehaviour:
       CureHP: 0
       UpBounceSpeed: 0
       DownDuration: 0
-      MAG_UpATK: 1
-      MAG_UpBounceSpeed: 1
-      MAG_DownDuration: 1
-    _skillStatus:
+      ChangeElement: 5
+      MAG_ATK: 1
+      MAG_BounceSpeed: 1
+      MAG_Duration: 1
+    upSkillStatus:
       timeToActivate: 0
       timeToFinish: 0
       UpATK: 0
       CureHP: 0
       UpBounceSpeed: 0
       DownDuration: 0
-      MAG_UpATK: 1
-      MAG_UpBounceSpeed: 1
-      MAG_DownDuration: 1
+      ChangeElement: 5
+      MAG_ATK: 1
+      MAG_BounceSpeed: 1
+      MAG_Duration: 1
   experence: 0
   gold: 0
 --- !u!212 &212511899601965124

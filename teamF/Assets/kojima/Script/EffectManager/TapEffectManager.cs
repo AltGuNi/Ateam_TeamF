@@ -11,6 +11,10 @@ public class TapEffectManager : MonoBehaviour {
 
     public TapGesture tapGesture;
 
+    void Awake()
+    {
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -33,7 +37,7 @@ public class TapEffectManager : MonoBehaviour {
 
     private void OnTap(object sender, EventArgs e)
     {
-        tapEffect.transform.position = Camera.main.ScreenToWorldPoint(tapGesture.ScreenPosition) + _camera.transform.forward * 10;
+        tapEffect.transform.position = Camera.main.ScreenToWorldPoint(tapGesture.ScreenPosition) + Camera.main.transform.forward * 10;
         tapEffect.Play();
     }
 }

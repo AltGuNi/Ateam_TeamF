@@ -69,17 +69,33 @@ public class GameTime : MonoBehaviour {
         }
     }
 
-    public void IsSlow()
+    public void IsSlo()
     {
         if (isSlow)
         {
-            Time.timeScale = 0.001f;
+            Time.timeScale = 0.0f;
             isSlow = false;
         }
         else
         {
+            Time.timeScale = 0.001f;
             isSlow = true;
         }
+    }
+
+    public void IsStop()
+    {
+        Time.timeScale = 0.0f;
+        isSlow = true;
+    }
+
+    public void IsPlay()
+    {
+        if (Time.timeScale == 0.0f)
+        {
+            Time.timeScale = 0.001f;
+        }
+        isSlow = false;
     }
 
     public void IsResult(bool _isWin)

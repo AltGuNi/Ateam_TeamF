@@ -11,6 +11,8 @@ public class CharacterQuestIcon : MonoBehaviour {
 
     public PlayerInfo.CharaNum charaNum;
 
+    public Num num;
+
     [SerializeField, Space(10)]
     public Sprite iconFrame;
     public Sprite iconFramePlay;
@@ -75,6 +77,8 @@ public class CharacterQuestIcon : MonoBehaviour {
                     }
                 }
             }
+            
+            num.num = Mathf.CeilToInt(timeToActivate);
             // アイコンの背景の処理
             // 切り捨て後の値
             float floorTime = Mathf.Floor(timeToActivate * 100.0f);
@@ -120,7 +124,8 @@ public class CharacterQuestIcon : MonoBehaviour {
 
         // プレイヤーの属性を変更
         buf = player.status.bulletElement;
-        if (playerInfo.chara[(int)charaNum].status.skillStatus.ChangeElement != BeseObject.Elements.Max)
+        if (playerInfo.chara[(int)charaNum].status.skillStatus.ChangeElement != BeseObject.Elements.Max &&
+            playerInfo.chara[(int)charaNum].status.skillStatus.ChangeElement != BeseObject.Elements.None)
         {
             player.status.bulletElement = playerInfo.chara[(int)charaNum].status.skillStatus.ChangeElement;
         }

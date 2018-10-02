@@ -39,19 +39,31 @@ public class BulletGenerator : MonoBehaviour {
         {
             case BeseObject.Elements.Nomal:
                 instance = Instantiate(nomalbulletPrefab);
-                audioSource.PlayOneShot (Nomal);
+                if (audioSource)
+                {
+                    audioSource.PlayOneShot(Nomal);
+                }
                 break;
             case BeseObject.Elements.Fire:
                 instance = Instantiate(firebulletPrefab);
-                audioSource.PlayOneShot (Fire);
+                if (audioSource)
+                {
+                    audioSource.PlayOneShot(Fire);
+                }
                 break;
             case BeseObject.Elements.Water:
                 instance = Instantiate(waterbulletPrefab);
-                audioSource.PlayOneShot (Water);
+                if (audioSource)
+                {
+                    audioSource.PlayOneShot(Water);
+                }
                 break;
             case BeseObject.Elements.Wood:
                 instance = Instantiate(woodbulletPrefab);
-                audioSource.PlayOneShot (Wood);
+                if (audioSource)
+                {
+                    audioSource.PlayOneShot(Wood);
+                }
                 break;
 
             default:

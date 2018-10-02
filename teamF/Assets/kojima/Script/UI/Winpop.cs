@@ -79,10 +79,10 @@ public class Winpop : MonoBehaviour {
             playerInfo.currentExperience = playerInfo.currentExperience % playerInfo.nextExperience;
         }
 
-        lv.num = playerInfo.level.ToString();
-        experience.num = playerInfo.currentExperience.ToString();
-        nextExperience.num = playerInfo.nextExperience.ToString();
-        gold.num = playerInfo.gold.ToString();
+        lv.num = playerInfo.level;
+        experience.num = playerInfo.currentExperience;
+        nextExperience.num = playerInfo.nextExperience;
+        gold.num = playerInfo.gold;
 
         countToDoubleTime += Time.deltaTime;
         if ((type >= 0) &&

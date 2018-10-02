@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552c787ad728e1a4a9e3a48b254b8b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpPrefab: {fileID: 1041157109469172, guid: a53fd272762bf6541941bb2b9898e4b5, type: 2}
+  hpPrefab: {fileID: 1282030578476488, guid: e977257009b0e1848a80fd5daa67849d, type: 2}
 --- !u!212 &212119985823129854
 SpriteRenderer:
   m_ObjectHideFlags: 1

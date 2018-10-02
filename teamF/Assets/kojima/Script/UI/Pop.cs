@@ -68,4 +68,9 @@ public class Pop : MonoBehaviour {
             isActive = true;
         }
     }
+
+    public void ClosePop()
+    {
+        isActive = false;
+    }
 }
