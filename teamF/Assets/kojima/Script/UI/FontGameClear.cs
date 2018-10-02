@@ -20,7 +20,8 @@ public class FontGameClear : MonoBehaviour {
     void Start ()
     {
         battleSoundManager = GameObject.Find("BattleSoundManager").GetComponent<BattleSoundManager>();
-        battleSoundManager.PlaySound(BattleSoundManager.Type.GameOver);
+        battleSoundManager.StopSound(BattleSoundManager.Type.BattleBGM);
+        battleSoundManager.PlaySound(BattleSoundManager.Type.GameClear, true);
         image = GetComponent<Image>();
         image.color = new Color(1, 1, 1, alpha);
         blur.isBlur();

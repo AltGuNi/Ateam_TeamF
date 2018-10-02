@@ -29,9 +29,12 @@ public class Winpop : MonoBehaviour {
     float countToDelayTime = 0.0f;
     float countToDoubleTime = 5.0f;
     float doubleValueBuf = 1.0f;
-	// Use this for initialization
-	void Start () {
-	}
+    BattleSoundManager battleSoundManager;
+    // Use this for initialization
+    void Start ()
+    {
+        battleSoundManager = GameObject.Find("BattleSoundManager").GetComponent<BattleSoundManager>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -53,6 +56,7 @@ public class Winpop : MonoBehaviour {
                     {
                         questInfo.experience -= valueBuf;
                         playerInfo.currentExperience += valueBuf;
+                        battleSoundManager.PlaySound(BattleSoundManager.Type.Up);
                     }
                     break;
                 case 1:
@@ -66,6 +70,7 @@ public class Winpop : MonoBehaviour {
                     {
                         questInfo.gold -= valueBuf;
                         playerInfo.gold += valueBuf;
+                        battleSoundManager.PlaySound(BattleSoundManager.Type.Up);
                     }
                     break;
             }

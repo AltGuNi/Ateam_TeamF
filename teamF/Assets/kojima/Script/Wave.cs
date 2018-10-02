@@ -9,9 +9,11 @@ public class Wave : MonoBehaviour {
     [HideInInspector]
     public FontWava fontWave;
     GameTime gameTime;
-	// Use this for initialization
-	void Start ()
+    BattleSoundManager battleSoundManager;
+    // Use this for initialization
+    void Start ()
     {
+        battleSoundManager = GameObject.Find("BattleSoundManager").GetComponent<BattleSoundManager>();
         if (!nextWave)
         {
             gameTime = GameObject.Find("GameTime").GetComponent<GameTime>();
@@ -32,6 +34,7 @@ public class Wave : MonoBehaviour {
             // ボスウェーブの場合
             if (!nextWave)
             {
+                battleSoundManager.StopSound(BattleSoundManager.Type.BattleBGM);
                 gameTime.IsResult(true);
             }
             else

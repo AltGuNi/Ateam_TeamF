@@ -20,6 +20,6 @@ public class SkillEffectManager : MonoBehaviour {
     public void SkillEffectPlay()
     {
         skillEffect.Emit(1);
-        battleSoundManager.PlaySound(BattleSoundManager.Type.PlaySkill);
+        battleSoundManager.PlaySound(BattleSoundManager.Type.PlaySkill, true);
     }
 }

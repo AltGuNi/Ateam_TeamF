@@ -80,7 +80,7 @@ public class ElementsBackGround : MonoBehaviour {
         if (player)
         {
             player.GetComponent<Character>().status.bulletElement = elements;
-            battleSoundManager.PlaySound(BattleSoundManager.Type.ChangeElement);
+            battleSoundManager.PlaySound(BattleSoundManager.Type.ChangeElement, true);
         }
     }
 }

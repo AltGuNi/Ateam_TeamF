@@ -9,10 +9,12 @@ public class ExplosionEffectManager : MonoBehaviour {
     public int emitCount = 9;
 
     List<Vector3> poslist = new List<Vector3>();
+    BattleSoundManager battleSoundManager;
     // Use this for initialization
     void Start () {
-		
-	}
+
+        battleSoundManager = GameObject.Find("BattleSoundManager").GetComponent<BattleSoundManager>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,6 +22,8 @@ public class ExplosionEffectManager : MonoBehaviour {
         {
             explosionEffect.transform.position = pos + _camera.transform.forward * 10;
             explosionEffect.Emit(emitCount);
+
+            battleSoundManager.PlaySound(BattleSoundManager.Type.Explosion, true);
         }
         poslist.Clear();
     }

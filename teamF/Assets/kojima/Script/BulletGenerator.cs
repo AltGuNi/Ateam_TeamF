@@ -35,19 +35,19 @@ public class BulletGenerator : MonoBehaviour {
         {
             case BeseObject.Elements.Nomal:
                 instance = Instantiate(nomalbulletPrefab);
-                battleSoundManager.PlaySound(BattleSoundManager.Type.NormalBullet);
+                battleSoundManager.PlaySound(BattleSoundManager.Type.NormalBullet, true);
                 break;
             case BeseObject.Elements.Fire:
                 instance = Instantiate(firebulletPrefab);
-                battleSoundManager.PlaySound(BattleSoundManager.Type.FireBullet);
+                battleSoundManager.PlaySound(BattleSoundManager.Type.FireBullet, true);
                 break;
             case BeseObject.Elements.Water:
                 instance = Instantiate(waterbulletPrefab);
-                battleSoundManager.PlaySound(BattleSoundManager.Type.WaterBullet);
+                battleSoundManager.PlaySound(BattleSoundManager.Type.WaterBullet, true);
                 break;
             case BeseObject.Elements.Wood:
                 instance = Instantiate(woodbulletPrefab);
-                battleSoundManager.PlaySound(BattleSoundManager.Type.WoodBullet);
+                battleSoundManager.PlaySound(BattleSoundManager.Type.WoodBullet, true);
                 break;
 
             default:

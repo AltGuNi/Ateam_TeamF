@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleSoundManager : MonoBehaviour {
+public class BattleSoundManager : MonoBehaviour
+{
 
     public enum Type
     {
@@ -16,6 +17,8 @@ public class BattleSoundManager : MonoBehaviour {
         ChangeElement,
         GameClear,
         GameOver,
+        Explosion,
+        Up,
 
         Max
     }
@@ -30,27 +33,76 @@ public class BattleSoundManager : MonoBehaviour {
         [Range(0.0f, 1.0f)]
         public float volume = 1.0f;
         public AudioSource audioSource;
+        public bool isTimeScale = false;
     };
 
     public Sound[] sound = new Sound[(int)Type.Max];
+    public UnityEngine.Audio.AudioMixer mixer;
 
     // Use this for initialization
-    void Start () {
-        PlaySound(Type.BattleBGM);
-    }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void PlaySound(Type type)
+    void Start()
     {
-        if (sound[(int)type].audioSource &&
-            sound[(int)type].sound)
+        PlaySound(Type.BattleBGM, true);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        for (int i = 0; i < sound.Length; i++)
         {
-            sound[(int)type].audioSource.volume = sound[(int)type].volume;
-            sound[(int)type].audioSource.PlayOneShot(sound[(int)type].sound);
+            if (sound[i].isTimeScale)
+            {
+                sound[i].audioSource.pitch = Time.timeScale;
+            }
+        }
+    }
+
+    public void PlaySound(Type type, bool startVolume = false)
+    {
+        for (int i = 0; i < sound.Length; i++)
+        {
+            if (sound[i].type == type)
+            {
+                if (sound[i].audioSource &&
+                    sound[i].sound)
+                {
+                    if (startVolume)
+                    {
+                        sound[i].audioSource.volume = sound[i].volume;
+                    }
+                    sound[i].audioSource.PlayOneShot(sound[i].sound);
+                }
+            }
+        }
+    }
+
+    public void ChangePitchSound(Type type, float pitch)
+    {
+        for (int i = 0; i < sound.Length; i++)
+        {
+            if (sound[i].type == type)
+            {
+                if (sound[i].audioSource &&
+                    sound[i].sound)
+                {
+                    sound[i].audioSource.pitch = pitch;
+                }
+            }
+        }
+    }
+
+    public void StopSound(Type type)
+    {
+        for (int i = 0; i < sound.Length; i++)
+        {
+            if (sound[i].type == type)
+            {
+                if (sound[i].audioSource &&
+                    sound[i].sound)
+                {
+                    sound[i].audioSource.Stop();
+                }
+            }
         }
     }
 }
