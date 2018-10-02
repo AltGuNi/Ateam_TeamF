@@ -23,7 +23,7 @@ public class HitEffectManager : MonoBehaviour {
         {
             hitEffect.transform.position = pos + _camera.transform.forward * 10;
             hitEffect.Emit(emitCount);
-            battleSoundManager.PlaySound(BattleSoundManager.Type.PlaySkill);
+            battleSoundManager.PlaySound(BattleSoundManager.Type.BulletHit);
         }
         poslist.Clear();
 	}

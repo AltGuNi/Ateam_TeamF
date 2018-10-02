@@ -46,8 +46,11 @@ public class BattleSoundManager : MonoBehaviour {
 
     public void PlaySound(Type type)
     {
-        Debug.Log("a");
-        sound[(int)type].audioSource.volume = sound[(int)type].volume;
-        sound[(int)type].audioSource.PlayOneShot(sound[(int)type].sound);
+        if (sound[(int)type].audioSource &&
+            sound[(int)type].sound)
+        {
+            sound[(int)type].audioSource.volume = sound[(int)type].volume;
+            sound[(int)type].audioSource.PlayOneShot(sound[(int)type].sound);
+        }
     }
 }
