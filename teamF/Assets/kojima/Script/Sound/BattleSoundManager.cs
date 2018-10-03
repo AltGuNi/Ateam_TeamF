@@ -19,6 +19,7 @@ public class BattleSoundManager : MonoBehaviour
         GameOver,
         Explosion,
         Up,
+        BossBGM,
 
         Max
     }

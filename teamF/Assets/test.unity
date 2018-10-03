@@ -4626,7 +4626,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 547008132
+  randomSeed: -646943529
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -9598,7 +9598,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1757399049
+  randomSeed: 992934791
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -14112,6 +14112,115 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &719778474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 719778476}
+  - component: {fileID: 719778475}
+  m_Layer: 0
+  m_Name: Boss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &719778475
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 719778474}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &719778476
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 719778474}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.7764983, y: -11.887973, z: -60.762238}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1595803384}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &753115026
 GameObject:
   m_ObjectHideFlags: 0
@@ -15975,7 +16084,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -780792737
+  randomSeed: 426689492
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -37216,6 +37325,7 @@ Transform:
   - {fileID: 617310860}
   - {fileID: 37836927}
   - {fileID: 1982569512}
+  - {fileID: 719778476}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37233,14 +37343,14 @@ MonoBehaviour:
   sound:
   - name: BGM
     type: 0
-    sound: {fileID: 8300000, guid: e38f6669029345940bd192d0fca28bdd, type: 3}
-    volume: 0.389
+    sound: {fileID: 8300000, guid: c8cab64461e8bac4993a8ab77436bc87, type: 3}
+    volume: 0.337
     audioSource: {fileID: 887745813}
     isTimeScale: 0
   - name: PlaySkill
     type: 1
     sound: {fileID: 8300000, guid: 896d19733c0f720449b854979714d8ec, type: 3}
-    volume: 0
+    volume: 0.236
     audioSource: {fileID: 1671875043}
     isTimeScale: 1
   - name: NormalBullet
@@ -37276,7 +37386,7 @@ MonoBehaviour:
   - name: ChangeElement
     type: 7
     sound: {fileID: 8300000, guid: 80b95de398ec7f643b98984da1d0be23, type: 3}
-    volume: 0.17
+    volume: 1
     audioSource: {fileID: 1407124344}
     isTimeScale: 1
   - name: GameClear
@@ -37302,6 +37412,12 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: ec02a4a265174c343a5c785c7775f45f, type: 3}
     volume: 0.366
     audioSource: {fileID: 1982569511}
+    isTimeScale: 0
+  - name: Boss
+    type: 12
+    sound: {fileID: 8300000, guid: 8f5e0e62ba9c6d9459eef25635a9dd2b, type: 3}
+    volume: 0.233
+    audioSource: {fileID: 719778475}
     isTimeScale: 0
   mixer: {fileID: 24100000, guid: ef5c82b7d4c66ea4bbf22cd896ddc577, type: 2}
 --- !u!1 &1598096498

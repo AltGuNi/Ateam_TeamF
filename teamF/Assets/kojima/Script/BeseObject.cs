@@ -80,6 +80,18 @@ public class BeseObject : MonoBehaviour {
             MAG_BounceSpeed *= b.MAG_BounceSpeed;
             MAG_Duration *= b.MAG_Duration;
         }
+
+        public void Remove(SkillStatus b)
+        {
+            UpATK -= b.UpATK;
+            CureHP -= b.CureHP;
+            UpBounceSpeed -= b.UpBounceSpeed;
+            DownDuration -= b.DownDuration;
+
+            MAG_ATK /= b.MAG_ATK;
+            MAG_BounceSpeed /= b.MAG_BounceSpeed;
+            MAG_Duration /= b.MAG_Duration;
+        }
         public void Init()
         {
             UpATK = 0.0f;      

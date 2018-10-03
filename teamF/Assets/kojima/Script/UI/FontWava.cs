@@ -30,8 +30,11 @@ public class FontWava : MonoBehaviour {
     float upDownFlashAlphaBuf = 0.0f;
     GameObject nextWaveBuf = null;
     BitFlag bitFlag = 0;
+    BattleSoundManager battleSoundManager;
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        battleSoundManager = GameObject.Find("BattleSoundManager").GetComponent<BattleSoundManager>();
         text = GetComponent<Text>();
         text.color = new Color(1, 1, 1, alpha);
         NextWave(startWave);
@@ -132,6 +135,8 @@ public class FontWava : MonoBehaviour {
         {
             // フラグにBossのフラグを立てる
             bitFlag |= BitFlag.Boss;
+            battleSoundManager.StopSound(BattleSoundManager.Type.BattleBGM);
+            battleSoundManager.PlaySound(BattleSoundManager.Type.BossBGM);
         }
     }
 }

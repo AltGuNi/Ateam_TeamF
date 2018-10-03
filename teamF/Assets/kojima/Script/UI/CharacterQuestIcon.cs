@@ -149,7 +149,7 @@ public class CharacterQuestIcon : MonoBehaviour {
         {
             player.status.bulletElement = buf;
         }
-        player.status.UpSkillStatus.Init();
+        player.status.UpSkillStatus.Remove(playerInfo.chara[(int)charaNum].status.skillStatus);
     }
 
 
