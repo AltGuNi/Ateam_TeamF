@@ -177,12 +177,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colideType: 2
   status:
-    bulletElement: 3
+    bulletElement: 4
     specialtyElement: 5
     attackType: 2
     valueStatus:
-      HP: 1
-      attack: 10
+      HP: 640
+      attack: 2
       defence: 0
       bounceSpeed: 1
       duration: 0.3
