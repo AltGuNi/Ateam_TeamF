@@ -33,6 +33,8 @@ public class Scroll_Menu : MonoBehaviour {
 	private Vector3 startPosition;
 	public float time = 0.5f;
 	public GameObject dark;
+	private AudioSource scroll_Sound;
+	public AudioClip audio;
 
 
 	// Use this for initialization
@@ -40,6 +42,7 @@ public class Scroll_Menu : MonoBehaviour {
 		this.transform.position = new Vector3(-2.0f, -2.0f, 0.0f);
 		startPosition = new Vector3(-2.0f, -2.0f, 0.0f);
 		dark.GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 0.0f, dark_level[i]);
+		scroll_Sound = GetComponent<AudioSource>();
 	}
 
 	public FlickGesture flickGesture;
@@ -75,6 +78,10 @@ public class Scroll_Menu : MonoBehaviour {
 		dark.GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 0.0f, dark_level[i]);
 		startTime = Time.timeSinceLevelLoad;
 		startPosition = this.transform.position;
+		
+		if (scroll_Sound){
+			scroll_Sound.PlayOneShot(audio);
+		}
     }
 
 
@@ -92,6 +99,11 @@ public class Scroll_Menu : MonoBehaviour {
 		dark.GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 0.0f, dark_level[i]);
 		startTime = Time.timeSinceLevelLoad;
 		startPosition = this.transform.position;
+
+		if (scroll_Sound){
+			scroll_Sound.PlayOneShot(audio);
+		}
+
     }
 
 	void Update () {
