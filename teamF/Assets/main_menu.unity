@@ -159,6 +159,7 @@ MonoBehaviour:
   i: 4
   time: 0.5
   dark: {fileID: 2088540036}
+  audio: {fileID: 8300000, guid: dfad063d5ce3eb340bbd6e2bbc15e3ec, type: 3}
   flickGesture: {fileID: 141652439}
   tapGestureUp: {fileID: 1290974647}
   tapGestureDown: {fileID: 1466498225}
@@ -678,6 +679,7 @@ MonoBehaviour:
   i: 0
   time: 0.5
   dark: {fileID: 0}
+  audio: {fileID: 0}
   flickGesture: {fileID: 88082309}
   tapGestureUp: {fileID: 0}
   tapGestureDown: {fileID: 0}
@@ -945,6 +947,7 @@ MonoBehaviour:
   i: 2
   time: 0.5
   dark: {fileID: 1774342088}
+  audio: {fileID: 8300000, guid: dfad063d5ce3eb340bbd6e2bbc15e3ec, type: 3}
   flickGesture: {fileID: 141652439}
   tapGestureUp: {fileID: 1290974647}
   tapGestureDown: {fileID: 1466498225}
@@ -1218,6 +1221,7 @@ MonoBehaviour:
   i: 3
   time: 0.5
   dark: {fileID: 0}
+  audio: {fileID: 0}
   flickGesture: {fileID: 88082309}
   tapGestureUp: {fileID: 0}
   tapGestureDown: {fileID: 0}
@@ -1424,6 +1428,7 @@ MonoBehaviour:
   i: 1
   time: 0.5
   dark: {fileID: 0}
+  audio: {fileID: 0}
   flickGesture: {fileID: 88082309}
   tapGestureUp: {fileID: 0}
   tapGestureDown: {fileID: 0}
@@ -1628,6 +1633,7 @@ MonoBehaviour:
   i: 0
   time: 0.5
   dark: {fileID: 1508901385}
+  audio: {fileID: 8300000, guid: dfad063d5ce3eb340bbd6e2bbc15e3ec, type: 3}
   flickGesture: {fileID: 141652439}
   tapGestureUp: {fileID: 1290974647}
   tapGestureDown: {fileID: 1466498225}
@@ -3478,6 +3484,7 @@ MonoBehaviour:
   i: 1
   time: 0.5
   dark: {fileID: 808343675}
+  audio: {fileID: 8300000, guid: dfad063d5ce3eb340bbd6e2bbc15e3ec, type: 3}
   flickGesture: {fileID: 141652439}
   tapGestureUp: {fileID: 1290974647}
   tapGestureDown: {fileID: 1466498225}
@@ -3644,6 +3651,7 @@ MonoBehaviour:
   i: 5
   time: 0.5
   dark: {fileID: 1299318166}
+  audio: {fileID: 8300000, guid: dfad063d5ce3eb340bbd6e2bbc15e3ec, type: 3}
   flickGesture: {fileID: 141652439}
   tapGestureUp: {fileID: 1290974647}
   tapGestureDown: {fileID: 1466498225}
@@ -3742,6 +3750,7 @@ MonoBehaviour:
   i: 3
   time: 0.5
   dark: {fileID: 245074530}
+  audio: {fileID: 8300000, guid: dfad063d5ce3eb340bbd6e2bbc15e3ec, type: 3}
   flickGesture: {fileID: 141652439}
   tapGestureUp: {fileID: 1290974647}
   tapGestureDown: {fileID: 1466498225}
@@ -4026,6 +4035,7 @@ MonoBehaviour:
   i: 6
   time: 0.5
   dark: {fileID: 359631644}
+  audio: {fileID: 8300000, guid: dfad063d5ce3eb340bbd6e2bbc15e3ec, type: 3}
   flickGesture: {fileID: 141652439}
   tapGestureUp: {fileID: 1290974647}
   tapGestureDown: {fileID: 1466498225}
@@ -4194,6 +4204,7 @@ MonoBehaviour:
   i: 2
   time: 0.5
   dark: {fileID: 0}
+  audio: {fileID: 0}
   flickGesture: {fileID: 88082309}
   tapGestureUp: {fileID: 0}
   tapGestureDown: {fileID: 0}
