@@ -44,6 +44,17 @@ public class BeseObject : MonoBehaviour {
         public float defence ;          // 防御
         public float bounceSpeed;       // 弾速
         public float duration;          // 発射間隔
+
+        public ValueStatus Clone()
+        {
+            ValueStatus clone = new ValueStatus();
+            clone.HP = this.HP;
+            clone.attack = this.attack;
+            clone.defence = this.defence;
+            clone.bounceSpeed = this.bounceSpeed;
+            clone.duration = this.duration;
+            return clone;
+        }
     };
 
     // 倍率の最高値
@@ -92,24 +103,21 @@ public class BeseObject : MonoBehaviour {
             MAG_BounceSpeed /= b.MAG_BounceSpeed;
             MAG_Duration /= b.MAG_Duration;
         }
-        public void Init()
-        {
-            UpATK = 0.0f;      
-            CureHP = 0.0f;    
-            UpBounceSpeed = 0.0f;     
-            DownDuration = 0.0f;
-            ChangeElement = Elements.Max;
 
-            MAG_ATK = 1.0f;
-            MAG_BounceSpeed = 1.0f;
-            MAG_Duration = 1.0f;   
-        }
-
-        public static SkillStatus New()
+        public SkillStatus Clone()
         {
-            SkillStatus skill = new SkillStatus();
-            skill.Init();
-            return skill;
+            SkillStatus clone = new SkillStatus();
+            clone.timeToActivate = this.timeToActivate;    
+            clone.timeToFinish = this.timeToFinish;      
+            clone.UpATK = this.UpATK;      
+            clone.CureHP = this.CureHP;                             
+            clone.UpBounceSpeed = this.UpBounceSpeed;      
+            clone.DownDuration = this.DownDuration;
+            clone.ChangeElement = this.ChangeElement;
+            clone.MAG_ATK = this.MAG_ATK;            
+            clone.MAG_BounceSpeed = this.MAG_BounceSpeed;
+            clone.MAG_Duration = this.DownDuration;
+            return clone;    
         }
     };
 
@@ -122,14 +130,25 @@ public class BeseObject : MonoBehaviour {
         public Elements specialtyElement = Elements.Max;        // 得意な属性
         public AttackType attackType = AttackType.Nomal;        // 攻撃の種類
         public ValueStatus valueStatus = new ValueStatus();     // 値のステータス
-        public SkillStatus skillStatus = SkillStatus.New();     // スキルステータス
+        public SkillStatus skillStatus;     // スキルステータス
 #if UNITY_EDITOR
         [ReadOnly]
 #endif
-        public SkillStatus upSkillStatus = SkillStatus.New();    // スキル向上値ステータス
-        public SkillStatus UpSkillStatus
+        public SkillStatus upSkillStatus;    // スキル向上値ステータス
+
+        public Status Clone()
         {
-            get { return upSkillStatus; }
+            Status clone = new Status();
+            clone.objectId = this.objectId;
+            clone.name = this.name;
+            clone.bulletElement = this.bulletElement;
+            clone.specialtyElement = this.specialtyElement;
+            clone.attackType = this.attackType;
+            clone.valueStatus = this.valueStatus.Clone();
+            clone.skillStatus = this.skillStatus.Clone();
+            clone.upSkillStatus = this.upSkillStatus.Clone();
+
+            return clone;
         }
     }
 
@@ -159,6 +178,7 @@ public class BeseObject : MonoBehaviour {
             {
                 isDamage = true;
                 doubleValue = 1.5f;
+                Debug.Log("weak");
             }
             else
             {
@@ -178,6 +198,7 @@ public class BeseObject : MonoBehaviour {
                 {
                     isDamage = true;
                     doubleValue = 1.0f;
+                    Debug.Log("hit");
                 }
             }
         }
@@ -197,7 +218,7 @@ public class BeseObject : MonoBehaviour {
             {
                 atk *= 1.5f;
             }
-            atk = (atk * enemy.UpSkillStatus.MAG_ATK) + enemy.UpSkillStatus.UpATK;
+            atk = (atk * enemy.upSkillStatus.MAG_ATK) + enemy.upSkillStatus.UpATK;
             // 防御値を計算
             float def = status.valueStatus.defence;
             // ダメージを計算

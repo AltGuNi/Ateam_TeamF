@@ -1,36 +1,55 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+
 using UnityEngine.SceneManagement;
 
-public class FadeManager : MonoBehaviour {
-    public GameObject Panel;
-    float a;
-		public AudioClip audio;
-		private AudioSource audioSource;
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
 
-	void Start () {
-		audioSource = gameObject.GetComponent<AudioSource> ();
-        a = Panel.GetComponent<SpriteRenderer>().color.a;
-	}
-
-//Aキーを押されたらフェード開始
-	void Update () {
-        　
-            StartCoroutine(FadePanel());
-						SceneManager.LoadScene ("Start");
-						audioSource.PlayOneShot (audio);
-	}
-
-//フェードアウト自体は↓の処理
-    IEnumerator FadePanel()
+public class FadeManager : MonoBehaviour
+{
+    float a_color;
+    bool flag_G;
+    public GameObject crea1;
+    float dark_dist = 0;
+    // Use this for initialization
+    void Start()
     {
-        while(a < 10)
+        a_color = 0;
+
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (a_color > 0)
         {
-            Panel.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 0.01f);
-            a += 0.01f;
-            yield return null;
+            crea1.GetComponent<SpriteRenderer>().color += new Color(0.0f, 0.0f, 0.0f, dark_dist);
+
+        }
+
+        if (flag_G)
+        {
+            a_color -= Time.deltaTime;
+            dark_dist = Time.deltaTime;
+        }
+        else
+        {
+            a_color += Time.deltaTime;
+            dark_dist = -Time.deltaTime;
+
+        }
+
+        if (a_color < -0.8)
+        {
+            a_color = 0;
+            flag_G = false;
+
+        }
+        else if (a_color > 1)
+        {
+            a_color = 1;
+            flag_G = true;
+            SceneManager.LoadScene("Start");
         }
     }
 }

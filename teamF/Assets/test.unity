@@ -37379,8 +37379,8 @@ MonoBehaviour:
     isTimeScale: 1
   - name: BulletHit
     type: 6
-    sound: {fileID: 0}
-    volume: 0.409
+    sound: {fileID: 8300000, guid: b4aef1b73dd97dc41a1d1e8faa474669, type: 3}
+    volume: 0.104
     audioSource: {fileID: 538480993}
     isTimeScale: 1
   - name: ChangeElement

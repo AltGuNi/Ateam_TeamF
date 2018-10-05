@@ -8,8 +8,11 @@ public class Bullet : BeseObject {
     [HideInInspector]
     public Vector2 velocity = Vector2.zero;
     Rigidbody2D rigid2D;
-	// Use this for initialization
-	void Start () {
+    BattleSoundManager battleSoundManager;
+    // Use this for initialization
+    void Start ()
+    {
+        battleSoundManager = GameObject.Find("BattleSoundManager").GetComponent<BattleSoundManager>();
         rigid2D = GetComponent<Rigidbody2D>();
     }
 	
@@ -44,6 +47,7 @@ public class Bullet : BeseObject {
                 baseObject.BeDamaged(status);
 
                 GameObject.Find("HitEffectManager").GetComponent<HitEffectManager>().HitEffectPlay(transform.position);
+                battleSoundManager.PlaySound(BattleSoundManager.Type.BulletHit);
                 Destroy(this.gameObject);
             }
             else if (colideType != baseObject.colideType &&
@@ -52,6 +56,7 @@ public class Bullet : BeseObject {
                 baseObject.BeDamaged(status);
 
                 GameObject.Find("HitEffectManager").GetComponent<HitEffectManager>().HitEffectPlay(transform.position);
+                battleSoundManager.PlaySound(BattleSoundManager.Type.BulletHit);
                 Destroy(this.gameObject);
             }
         }
@@ -65,6 +70,7 @@ public class Bullet : BeseObject {
     public void Destroy()
     {
         GameObject.Find("HitEffectManager").GetComponent<HitEffectManager>().HitEffectPlay(transform.position);
+        battleSoundManager.PlaySound(BattleSoundManager.Type.BulletHit);
         Destroy(this.gameObject);
     }
 }

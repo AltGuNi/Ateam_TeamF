@@ -19,7 +19,7 @@ public class FontGameOver : MonoBehaviour {
     void Start () {
 
         battleSoundManager = GameObject.Find("BattleSoundManager").GetComponent<BattleSoundManager>();
-        battleSoundManager.StopSound(BattleSoundManager.Type.BattleBGM);
+        battleSoundManager.StopSound(BattleSoundManager.Type.BossBGM);
         battleSoundManager.PlaySound(BattleSoundManager.Type.GameOver, true);
         image = GetComponent<Image>();
         image.color = new Color(1, 1, 1, alpha);

@@ -45,7 +45,7 @@ public class Shot : MonoBehaviour
         if (flag)
         {
             count += Time.deltaTime;
-            float duration = (baseObject.status.valueStatus.duration - baseObject.status.UpSkillStatus.DownDuration) * baseObject.status.UpSkillStatus.MAG_Duration;
+            float duration = (baseObject.status.valueStatus.duration - baseObject.status.upSkillStatus.DownDuration) * baseObject.status.upSkillStatus.MAG_Duration;
             if (count > duration)
             {
                 bulletGenerator.Instance(baseObject, radian);

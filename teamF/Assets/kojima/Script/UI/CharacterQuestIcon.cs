@@ -118,7 +118,7 @@ public class CharacterQuestIcon : MonoBehaviour {
         }
 
         buf = player.status.bulletElement;
-        player.status.UpSkillStatus.Add(playerInfo.chara[(int)charaNum].status.skillStatus);
+        player.status.upSkillStatus.Add(playerInfo.chara[(int)charaNum].status.skillStatus);
         // 回復のスキル処理
         player.status.valueStatus.HP += playerInfo.chara[(int)charaNum].status.skillStatus.CureHP;
 
@@ -149,7 +149,7 @@ public class CharacterQuestIcon : MonoBehaviour {
         {
             player.status.bulletElement = buf;
         }
-        player.status.UpSkillStatus.Remove(playerInfo.chara[(int)charaNum].status.skillStatus);
+        player.status.upSkillStatus.Remove(playerInfo.chara[(int)charaNum].status.skillStatus);
     }
 
 
